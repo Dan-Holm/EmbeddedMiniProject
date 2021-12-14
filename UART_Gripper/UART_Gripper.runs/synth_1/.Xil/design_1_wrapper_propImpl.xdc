@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:{/home/esme/Desktop/VivadoProjects/EmbeddedSystems/UART_Gripper/UART_Gripper.srcs/constrs_1/imports/Lecture3/PYNQ-Z2 v1.0.xdc} rfile:{../../../UART_Gripper.srcs/constrs_1/imports/Lecture3/PYNQ-Z2 v1.0.xdc} id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:{/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.srcs/constrs_1/imports/Lecture3/PYNQ-Z2 v1.0.xdc} rfile:{../../../UART_Gripper.srcs/constrs_1/imports/Lecture3/PYNQ-Z2 v1.0.xdc} id:1} [current_design]
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN H16   IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L13P_T2_MRCC_35 Sch=sysclk
 set_property src_info {type:XDC file:1 line:13 export:INPUT save:INPUT read:READ} [current_design]

@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.1.1 (lin64) Build 3286242 Wed Jul 28 13:09:46 MDT 2021
-| Date         : Mon Nov  1 18:24:21 2021
-| Host         : adm-127190 running 64-bit Ubuntu 20.04.3 LTS
+| Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+| Date         : Tue Dec 14 11:36:49 2021
+| Host         : Daniel-laptop running 64-bit Ubuntu 20.04.3 LTS
 | Command      : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 | Design       : design_1_wrapper
 | Device       : xc7z020clg400-1

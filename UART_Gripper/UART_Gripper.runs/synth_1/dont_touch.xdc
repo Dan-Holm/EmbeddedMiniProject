@@ -24,4 +24,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_cl
 # IP: bd/design_1/ip/design_1_LUT_0_0/design_1_LUT_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_LUT_0_0 || ORIG_REF_NAME==design_1_LUT_0_0} -quiet] -quiet
 
-# XDC: /home/esme/Desktop/VivadoProjects/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/design_1_ooc.xdc
+# XDC: /home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/design_1_ooc.xdc
