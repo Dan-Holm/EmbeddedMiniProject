@@ -1,52 +1,51 @@
 #-----------------------------------------------------------
-# Vivado v2021.1.1 (64-bit)
-# SW Build 3286242 on Wed Jul 28 13:09:46 MDT 2021
-# IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
-# Start of session at: Mon Nov  1 18:22:41 2021
-# Process ID: 10425
-# Current directory: /home/esme/Desktop/VivadoProjects/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/design_1_Comp_27_0_0_synth_1
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue Dec 14 16:10:52 2021
+# Process ID: 39829
+# Current directory: /home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/design_1_Comp_27_0_0_synth_1
 # Command line: vivado -log design_1_Comp_27_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_Comp_27_0_0.tcl
-# Log file: /home/esme/Desktop/VivadoProjects/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/design_1_Comp_27_0_0_synth_1/design_1_Comp_27_0_0.vds
-# Journal file: /home/esme/Desktop/VivadoProjects/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/design_1_Comp_27_0_0_synth_1/vivado.jou
+# Log file: /home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/design_1_Comp_27_0_0_synth_1/design_1_Comp_27_0_0.vds
+# Journal file: /home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/design_1_Comp_27_0_0_synth_1/vivado.jou
 #-----------------------------------------------------------
-Sourcing tcl script '/home/esme/.Xilinx/Vivado/Vivado_init.tcl'
 source design_1_Comp_27_0_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/mnt/data0/xilinx/Vivado/2021.1/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2021.1/data/ip'.
 Command: synth_design -top design_1_Comp_27_0_0 -part xc7z020clg400-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 10589
+INFO: [Synth 8-7075] Helper process launched with PID 39888
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2517.809 ; gain = 0.000 ; free physical = 9987 ; free virtual = 20667
+Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2437.148 ; gain = 0.000 ; free physical = 145 ; free virtual = 1080
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_Comp_27_0_0' [/home/esme/Desktop/VivadoProjects/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/ip/design_1_Comp_27_0_0_1/synth/design_1_Comp_27_0_0.vhd:64]
-INFO: [Synth 8-3491] module 'Comp_27' declared at '/home/esme/Desktop/VivadoProjects/EmbeddedSystems/UART_Gripper/UART_Gripper.srcs/sources_1/imports/new/Comp_27.vhd:34' bound to instance 'U0' of component 'Comp_27' [/home/esme/Desktop/VivadoProjects/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/ip/design_1_Comp_27_0_0_1/synth/design_1_Comp_27_0_0.vhd:83]
-INFO: [Synth 8-638] synthesizing module 'Comp_27' [/home/esme/Desktop/VivadoProjects/EmbeddedSystems/UART_Gripper/UART_Gripper.srcs/sources_1/imports/new/Comp_27.vhd:40]
-WARNING: [Synth 8-614] signal 'x_sig' is read in the process but is not in the sensitivity list [/home/esme/Desktop/VivadoProjects/EmbeddedSystems/UART_Gripper/UART_Gripper.srcs/sources_1/imports/new/Comp_27.vhd:43]
-WARNING: [Synth 8-614] signal 'y_sig' is read in the process but is not in the sensitivity list [/home/esme/Desktop/VivadoProjects/EmbeddedSystems/UART_Gripper/UART_Gripper.srcs/sources_1/imports/new/Comp_27.vhd:43]
-INFO: [Synth 8-256] done synthesizing module 'Comp_27' (1#1) [/home/esme/Desktop/VivadoProjects/EmbeddedSystems/UART_Gripper/UART_Gripper.srcs/sources_1/imports/new/Comp_27.vhd:40]
-INFO: [Synth 8-256] done synthesizing module 'design_1_Comp_27_0_0' (2#1) [/home/esme/Desktop/VivadoProjects/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/ip/design_1_Comp_27_0_0_1/synth/design_1_Comp_27_0_0.vhd:64]
+INFO: [Synth 8-638] synthesizing module 'design_1_Comp_27_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/ip/design_1_Comp_27_0_0_1/synth/design_1_Comp_27_0_0.vhd:64]
+INFO: [Synth 8-3491] module 'Comp_27' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.srcs/sources_1/imports/new/Comp_27.vhd:34' bound to instance 'U0' of component 'Comp_27' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/ip/design_1_Comp_27_0_0_1/synth/design_1_Comp_27_0_0.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'Comp_27' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.srcs/sources_1/imports/new/Comp_27.vhd:40]
+WARNING: [Synth 8-614] signal 'x_sig' is read in the process but is not in the sensitivity list [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.srcs/sources_1/imports/new/Comp_27.vhd:43]
+WARNING: [Synth 8-614] signal 'y_sig' is read in the process but is not in the sensitivity list [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.srcs/sources_1/imports/new/Comp_27.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'Comp_27' (1#1) [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.srcs/sources_1/imports/new/Comp_27.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'design_1_Comp_27_0_0' (2#1) [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/ip/design_1_Comp_27_0_0_1/synth/design_1_Comp_27_0_0.vhd:64]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2517.809 ; gain = 0.000 ; free physical = 8451 ; free virtual = 19138
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2437.148 ; gain = 0.000 ; free physical = 912 ; free virtual = 1925
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2517.809 ; gain = 0.000 ; free physical = 7886 ; free virtual = 18572
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2437.148 ; gain = 0.000 ; free physical = 779 ; free virtual = 1848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2525.715 ; gain = 7.906 ; free physical = 7878 ; free virtual = 18565
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2444.855 ; gain = 7.707 ; free physical = 777 ; free virtual = 1846
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2525.715 ; gain = 7.906 ; free physical = 7815 ; free virtual = 18502
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2444.855 ; gain = 7.707 ; free physical = 750 ; free virtual = 1826
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -70,20 +69,20 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2525.715 ; gain = 7.906 ; free physical = 9352 ; free virtual = 20079
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2444.855 ; gain = 7.707 ; free physical = 2100 ; free virtual = 3449
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2525.715 ; gain = 7.906 ; free physical = 9352 ; free virtual = 20079
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2444.855 ; gain = 7.707 ; free physical = 2098 ; free virtual = 3447
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2525.715 ; gain = 7.906 ; free physical = 9348 ; free virtual = 20076
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2444.855 ; gain = 7.707 ; free physical = 2097 ; free virtual = 3447
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -101,37 +100,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2525.715 ; gain = 7.906 ; free physical = 9099 ; free virtual = 19828
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2444.855 ; gain = 7.707 ; free physical = 2162 ; free virtual = 3594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2525.715 ; gain = 7.906 ; free physical = 9099 ; free virtual = 19828
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2444.855 ; gain = 7.707 ; free physical = 2162 ; free virtual = 3594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2525.715 ; gain = 7.906 ; free physical = 9099 ; free virtual = 19828
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2444.855 ; gain = 7.707 ; free physical = 2161 ; free virtual = 3594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2525.715 ; gain = 7.906 ; free physical = 9099 ; free virtual = 19828
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2444.855 ; gain = 7.707 ; free physical = 2161 ; free virtual = 3594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2525.715 ; gain = 7.906 ; free physical = 9099 ; free virtual = 19828
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2444.855 ; gain = 7.707 ; free physical = 2161 ; free virtual = 3593
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2525.715 ; gain = 7.906 ; free physical = 9099 ; free virtual = 19828
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2444.855 ; gain = 7.707 ; free physical = 2161 ; free virtual = 3593
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -160,18 +159,18 @@ Report Instance Areas:
 |2     |  U0     |Comp_27 |    32|
 +------+---------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2525.715 ; gain = 7.906 ; free physical = 9099 ; free virtual = 19828
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2444.855 ; gain = 7.707 ; free physical = 2160 ; free virtual = 3593
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2525.715 ; gain = 7.906 ; free physical = 9100 ; free virtual = 19830
-Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2525.723 ; gain = 7.906 ; free physical = 9100 ; free virtual = 19830
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2444.855 ; gain = 7.707 ; free physical = 2161 ; free virtual = 3594
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2444.863 ; gain = 7.707 ; free physical = 2161 ; free virtual = 3594
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2525.723 ; gain = 0.000 ; free physical = 9088 ; free virtual = 19821
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2444.863 ; gain = 0.000 ; free physical = 2233 ; free virtual = 3665
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2525.723 ; gain = 0.000 ; free physical = 9284 ; free virtual = 20030
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2444.863 ; gain = 0.000 ; free physical = 2254 ; free virtual = 3721
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -179,10 +178,11 @@ Synth Design complete, checksum: a22dc443
 INFO: [Common 17-83] Releasing license: Synthesis
 20 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 2525.723 ; gain = 8.012 ; free physical = 9385 ; free virtual = 20131
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:20 . Memory (MB): peak = 2444.863 ; gain = 8.012 ; free physical = 2393 ; free virtual = 3859
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Common 17-1381] The checkpoint '/home/esme/Desktop/VivadoProjects/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/design_1_Comp_27_0_0_synth_1/design_1_Comp_27_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_Comp_27_0_0, cache-ID = 555d965c8f08442e
-INFO: [Common 17-1381] The checkpoint '/home/esme/Desktop/VivadoProjects/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/design_1_Comp_27_0_0_synth_1/design_1_Comp_27_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/design_1_Comp_27_0_0_synth_1/design_1_Comp_27_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2656.695 ; gain = 211.832 ; free physical = 1208 ; free virtual = 2766
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_Comp_27_0_0, cache-ID = ce52e90e631072d2
+INFO: [Common 17-1381] The checkpoint '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/design_1_Comp_27_0_0_synth_1/design_1_Comp_27_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_Comp_27_0_0_utilization_synth.rpt -pb design_1_Comp_27_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Nov  1 18:23:09 2021...
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 14 16:11:34 2021...

@@ -27,4 +27,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_top_
 # IP: bd/design_top/ip/design_top_clk_divider_0_0/design_top_clk_divider_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_top_clk_divider_0_0 || ORIG_REF_NAME==design_top_clk_divider_0_0} -quiet] -quiet
 
-# XDC: /home/esme/Desktop/VivadoProjects/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/design_top_ooc.xdc
+# XDC: /home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/design_top_ooc.xdc

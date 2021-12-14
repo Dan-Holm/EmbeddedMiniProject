@@ -70,11 +70,11 @@ ARCHITECTURE design_1_LUT_0_0_arch OF design_1_LUT_0_0 IS
     );
   END COMPONENT LUT;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF design_1_LUT_0_0_arch: ARCHITECTURE IS "LUT,Vivado 2021.1.1";
+  ATTRIBUTE X_CORE_INFO OF design_1_LUT_0_0_arch: ARCHITECTURE IS "LUT,Vivado 2021.1";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_1_LUT_0_0_arch : ARCHITECTURE IS "design_1_LUT_0_0,LUT,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_1_LUT_0_0_arch: ARCHITECTURE IS "design_1_LUT_0_0,LUT,{x_ipProduct=Vivado 2021.1.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=LUT,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED}";
+  ATTRIBUTE CORE_GENERATION_INFO OF design_1_LUT_0_0_arch: ARCHITECTURE IS "design_1_LUT_0_0,LUT,{x_ipProduct=Vivado 2021.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=LUT,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF design_1_LUT_0_0_arch: ARCHITECTURE IS "module_ref";
 BEGIN

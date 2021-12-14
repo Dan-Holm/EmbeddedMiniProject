@@ -1,10 +1,10 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2021.1.1 (lin64) Build 3286242 Wed Jul 28 13:09:46 MDT 2021
-// Date        : Mon Nov  1 18:23:09 2021
-// Host        : adm-127190 running 64-bit Ubuntu 20.04.3 LTS
+// Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+// Date        : Tue Dec 14 16:11:34 2021
+// Host        : Daniel-laptop running 64-bit Ubuntu 20.04.3 LTS
 // Command     : write_verilog -force -mode funcsim
-//               /home/esme/Desktop/VivadoProjects/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/ip/design_1_Comp_27_0_0_1/design_1_Comp_27_0_0_sim_netlist.v
+//               /home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/ip/design_1_Comp_27_0_0_1/design_1_Comp_27_0_0_sim_netlist.v
 // Design      : design_1_Comp_27_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,7 +13,7 @@
 `timescale 1 ps / 1 ps
 
 (* CHECK_LICENSE_TYPE = "design_1_Comp_27_0_0,Comp_27,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
-(* x_core_info = "Comp_27,Vivado 2021.1.1" *) 
+(* x_core_info = "Comp_27,Vivado 2021.1" *) 
 (* NotValidForBitStream *)
 module design_1_Comp_27_0_0
    (x,

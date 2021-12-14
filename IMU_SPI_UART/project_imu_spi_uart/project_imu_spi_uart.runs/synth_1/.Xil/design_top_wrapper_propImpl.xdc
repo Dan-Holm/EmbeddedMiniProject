@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/home/esme/Desktop/VivadoProjects/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.srcs/constrs_1/new/const1.xdc rfile:../../../project_imu_spi_uart.srcs/constrs_1/new/const1.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.srcs/constrs_1/new/const1.xdc rfile:../../../project_imu_spi_uart.srcs/constrs_1/new/const1.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN H16 IOSTANDARD LVCMOS33} [get_ports clk]
 set_property src_info {type:XDC file:1 line:19 export:INPUT save:INPUT read:READ} [current_design]

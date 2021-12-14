@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# LUT, Comp_27, Counter_27, clk_divider, rx_mod
+# Gripper_ctrl, LUT, clk_divider, Comp_27, Counter_27
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -128,90 +128,6 @@ if { $nRet != 0 } {
 # DESIGN PROCs
 ##################################################################
 
-
-# Hierarchical cell: UART_Percent
-proc create_hier_cell_UART_Percent { parentCell nameHier } {
-
-  variable script_folder
-
-  if { $parentCell eq "" || $nameHier eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2092 -severity "ERROR" "create_hier_cell_UART_Percent() - Empty argument(s)!"}
-     return
-  }
-
-  # Get object for parentCell
-  set parentObj [get_bd_cells $parentCell]
-  if { $parentObj == "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2090 -severity "ERROR" "Unable to find parent cell <$parentCell>!"}
-     return
-  }
-
-  # Make sure parentObj is hier blk
-  set parentType [get_property TYPE $parentObj]
-  if { $parentType ne "hier" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2091 -severity "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
-     return
-  }
-
-  # Save current instance; Restore later
-  set oldCurInst [current_bd_instance .]
-
-  # Set parent object as current
-  current_bd_instance $parentObj
-
-  # Create cell and set as current instance
-  set hier_obj [create_bd_cell -type hier $nameHier]
-  current_bd_instance $hier_obj
-
-  # Create interface pins
-
-  # Create pins
-  create_bd_pin -dir O -from 3 -to 0 Dout
-  create_bd_pin -dir I -type clk clk
-  create_bd_pin -dir I -type rst rst
-  create_bd_pin -dir I sin_0
-
-  # Create instance: clk_divider_0, and set properties
-  set block_name clk_divider
-  set block_cell_name clk_divider_0
-  if { [catch {set clk_divider_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $clk_divider_0 eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
-  # Create instance: rx_mod_0, and set properties
-  set block_name rx_mod
-  set block_cell_name rx_mod_0
-  if { [catch {set rx_mod_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $rx_mod_0 eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
-  # Create instance: xlslice_0, and set properties
-  set xlslice_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0 ]
-  set_property -dict [ list \
-   CONFIG.DIN_FROM {3} \
-   CONFIG.DIN_WIDTH {8} \
-   CONFIG.DOUT_WIDTH {4} \
- ] $xlslice_0
-
-  # Create port connections
-  connect_bd_net -net clk_0_1 [get_bd_pins clk] [get_bd_pins clk_divider_0/clk]
-  connect_bd_net -net clk_divider_0_clk_div [get_bd_pins clk_divider_0/clk_div] [get_bd_pins rx_mod_0/clk]
-  connect_bd_net -net rst_0_1 [get_bd_pins rst] [get_bd_pins clk_divider_0/rst] [get_bd_pins rx_mod_0/rst]
-  connect_bd_net -net rx_mod_0_data_out [get_bd_pins rx_mod_0/data_out] [get_bd_pins xlslice_0/Din]
-  connect_bd_net -net sin_0_1 [get_bd_pins sin_0] [get_bd_pins rx_mod_0/sin]
-  connect_bd_net -net xlslice_0_Dout [get_bd_pins Dout] [get_bd_pins xlslice_0/Dout]
-
-  # Restore current instance
-  current_bd_instance $oldCurInst
-}
 
 # Hierarchical cell: PWM
 proc create_hier_cell_PWM { parentCell nameHier } {
@@ -327,12 +243,24 @@ proc create_root_design { parentCell } {
 
   # Create ports
   set LED [ create_bd_port -dir O LED ]
+  set btn1 [ create_bd_port -dir I btn1 ]
   set clk [ create_bd_port -dir I -type clk clk ]
   set en [ create_bd_port -dir I en ]
+  set grip_close [ create_bd_port -dir I grip_close ]
   set motor [ create_bd_port -dir O motor ]
   set rst [ create_bd_port -dir I -type rst rst ]
-  set sin [ create_bd_port -dir I sin ]
 
+  # Create instance: Gripper_ctrl_0, and set properties
+  set block_name Gripper_ctrl
+  set block_cell_name Gripper_ctrl_0
+  if { [catch {set Gripper_ctrl_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $Gripper_ctrl_0 eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: LUT_0, and set properties
   set block_name LUT
   set block_cell_name LUT_0
@@ -347,17 +275,35 @@ proc create_root_design { parentCell } {
   # Create instance: PWM
   create_hier_cell_PWM [current_bd_instance .] PWM
 
-  # Create instance: UART_Percent
-  create_hier_cell_UART_Percent [current_bd_instance .] UART_Percent
+  # Create instance: clk_divider_0, and set properties
+  set block_name clk_divider
+  set block_cell_name clk_divider_0
+  if { [catch {set clk_divider_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $clk_divider_0 eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: xlconstant_0, and set properties
+  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
+  set_property -dict [ list \
+   CONFIG.CONST_VAL {0} \
+   CONFIG.CONST_WIDTH {16} \
+ ] $xlconstant_0
 
   # Create port connections
   connect_bd_net -net Comp_27_0_z [get_bd_ports LED] [get_bd_ports motor] [get_bd_pins PWM/LED]
+  connect_bd_net -net Gripper_ctrl_0_percent [get_bd_pins Gripper_ctrl_0/percent] [get_bd_pins LUT_0/percent]
   connect_bd_net -net LUT_0_bits [get_bd_pins LUT_0/bits] [get_bd_pins PWM/y]
-  connect_bd_net -net clk_0_1 [get_bd_ports clk] [get_bd_pins PWM/clk] [get_bd_pins UART_Percent/clk]
+  connect_bd_net -net btn_0_1 [get_bd_ports btn1] [get_bd_pins Gripper_ctrl_0/btn]
+  connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins PWM/clk] [get_bd_pins clk_divider_0/clk]
+  connect_bd_net -net clk_divider_0_clk_div [get_bd_pins Gripper_ctrl_0/clk] [get_bd_pins clk_divider_0/clk_div]
   connect_bd_net -net en_0_1 [get_bd_ports en] [get_bd_pins PWM/en]
-  connect_bd_net -net rst_0_1 [get_bd_ports rst] [get_bd_pins PWM/rst] [get_bd_pins UART_Percent/rst]
-  connect_bd_net -net sin_0_1 [get_bd_ports sin] [get_bd_pins UART_Percent/sin_0]
-  connect_bd_net -net xlslice_0_Dout [get_bd_pins LUT_0/percent] [get_bd_pins UART_Percent/Dout]
+  connect_bd_net -net grip_close_0_1 [get_bd_ports grip_close] [get_bd_pins Gripper_ctrl_0/grip_close]
+  connect_bd_net -net rst_0_1 [get_bd_ports rst] [get_bd_pins PWM/rst] [get_bd_pins clk_divider_0/rst]
+  connect_bd_net -net xlconstant_0_dout [get_bd_pins Gripper_ctrl_0/mag_data] [get_bd_pins xlconstant_0/dout]
 
   # Create address segments
 

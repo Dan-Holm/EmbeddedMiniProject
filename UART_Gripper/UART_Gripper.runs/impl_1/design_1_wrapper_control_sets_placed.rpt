@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
-| Date         : Tue Dec 14 11:36:16 2021
+| Date         : Tue Dec 14 16:15:27 2021
 | Host         : Daniel-laptop running 64-bit Ubuntu 20.04.3 LTS
 | Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
 | Design       : design_1_wrapper
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |     5 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    16 |
+| Unused register locations in slices containing registers |    17 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -41,10 +41,10 @@ Table of Contents
 +--------------------+-------+
 | Total control sets |     5 |
 | >= 0 to < 4        |     1 |
-| >= 4 to < 6        |     0 |
-| >= 6 to < 8        |     1 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     1 |
-| >= 10 to < 12      |     1 |
+| >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
 | >= 16              |     1 |
@@ -58,26 +58,26 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               1 |            1 |
-| No           | No                    | Yes                    |              15 |            6 |
+| No           | No                    | No                     |               5 |            3 |
+| No           | No                    | Yes                    |               8 |            3 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              32 |           10 |
-| Yes          | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              22 |            7 |
+| Yes          | Yes                   | No                     |               4 |            2 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+---------------------------------------------------+------------------------------------------------------+------------------+------------------+----------------+--------------+
-|                    Clock Signal                   |                     Enable Signal                    | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
-+---------------------------------------------------+------------------------------------------------------+------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG                                    |                                                      |                  |                1 |              1 |         1.00 |
-|  design_1_i/UART_Percent/clk_divider_0/U0/clk_div |                                                      | rst_IBUF         |                3 |              7 |         2.33 |
-|  clk_IBUF_BUFG                                    |                                                      | rst_IBUF         |                3 |              8 |         2.67 |
-|  design_1_i/UART_Percent/clk_divider_0/U0/clk_div | design_1_i/UART_Percent/rx_mod_0/U0/rxreg[8]_i_1_n_0 | rst_IBUF         |                3 |             10 |         3.33 |
-|  clk_IBUF_BUFG                                    | en_IBUF                                              | rst_IBUF         |                7 |             22 |         3.14 |
-+---------------------------------------------------+------------------------------------------------------+------------------+------------------+----------------+--------------+
++--------------------------------------+------------------------------------+-------------------------------------+------------------+----------------+--------------+
+|             Clock Signal             |            Enable Signal           |           Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------------------+------------------------------------+-------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG                       |                                    |                                     |                1 |              1 |         1.00 |
+|  design_1_i/clk_divider_0/U0/clk_div |                                    |                                     |                2 |              4 |         2.00 |
+|  design_1_i/clk_divider_0/U0/clk_div | design_1_i/Gripper_ctrl_0/U0/count | design_1_i/Gripper_ctrl_0/U0/count0 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG                       |                                    | rst_IBUF                            |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG                       | en_IBUF                            | rst_IBUF                            |                7 |             22 |         3.14 |
++--------------------------------------+------------------------------------+-------------------------------------+------------------+----------------+--------------+
 
 
