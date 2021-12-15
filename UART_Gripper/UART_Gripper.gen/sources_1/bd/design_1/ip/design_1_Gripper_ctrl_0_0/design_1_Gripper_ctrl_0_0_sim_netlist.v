@@ -1,10 +1,10 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
-// Date        : Tue Dec 14 15:56:17 2021
+// Date        : Wed Dec 15 13:21:01 2021
 // Host        : Daniel-laptop running 64-bit Ubuntu 20.04.3 LTS
-// Command     : write_verilog -force -mode funcsim -rename_top design_1_Gripper_ctrl_0_0 -prefix
-//               design_1_Gripper_ctrl_0_0_ design_1_Gripper_ctrl_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               /home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/ip/design_1_Gripper_ctrl_0_0/design_1_Gripper_ctrl_0_0_sim_netlist.v
 // Design      : design_1_Gripper_ctrl_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,6 +12,43 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
+(* CHECK_LICENSE_TYPE = "design_1_Gripper_ctrl_0_0,Gripper_ctrl,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* x_core_info = "Gripper_ctrl,Vivado 2021.1" *) 
+(* NotValidForBitStream *)
+module design_1_Gripper_ctrl_0_0
+   (grip_close,
+    clk,
+    mag_data,
+    percent,
+    btn);
+  input grip_close;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *) input clk;
+  input [15:0]mag_data;
+  output [3:0]percent;
+  input btn;
+
+  wire \<const1> ;
+  wire btn;
+  wire clk;
+  wire grip_close;
+  wire [15:0]mag_data;
+  wire [0:0]\^percent ;
+
+  assign percent[3] = \<const1> ;
+  assign percent[2] = \^percent [0];
+  assign percent[1] = \<const1> ;
+  assign percent[0] = \^percent [0];
+  design_1_Gripper_ctrl_0_0_Gripper_ctrl U0
+       (.btn(btn),
+        .clk(clk),
+        .grip_close(grip_close),
+        .mag_data(mag_data),
+        .percent(\^percent ));
+  VCC VCC
+       (.P(\<const1> ));
+endmodule
+
+(* ORIG_REF_NAME = "Gripper_ctrl" *) 
 module design_1_Gripper_ctrl_0_0_Gripper_ctrl
    (percent,
     btn,
@@ -45,7 +82,7 @@ module design_1_Gripper_ctrl_0_0_Gripper_ctrl
   wire [15:0]mag_data;
   wire [3:0]p_0_in;
   wire [0:0]percent;
-  wire \percent[3]_i_1_n_0 ;
+  wire \percent[2]_i_1_n_0 ;
   wire [2:0]state;
   wire [2:0]state__0;
 
@@ -59,7 +96,7 @@ module design_1_Gripper_ctrl_0_0_Gripper_ctrl
         .I4(state[0]),
         .I5(btn),
         .O(\FSM_sequential_state[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT5 #(
     .INIT(32'h023E020E)) 
     \FSM_sequential_state[0]_i_2 
@@ -69,7 +106,7 @@ module design_1_Gripper_ctrl_0_0_Gripper_ctrl
         .I3(state[0]),
         .I4(btn),
         .O(state__0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \FSM_sequential_state[0]_i_3 
@@ -86,7 +123,7 @@ module design_1_Gripper_ctrl_0_0_Gripper_ctrl
         .I4(state[2]),
         .I5(\FSM_sequential_state[2]_i_5_n_0 ),
         .O(\FSM_sequential_state[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT4 #(
     .INIT(16'h1101)) 
     \FSM_sequential_state[1]_i_2 
@@ -114,7 +151,7 @@ module design_1_Gripper_ctrl_0_0_Gripper_ctrl
         .I3(mag_data[4]),
         .I4(mag_data[2]),
         .O(\FSM_sequential_state[2]_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT5 #(
     .INIT(32'h000AFC00)) 
     \FSM_sequential_state[2]_i_2 
@@ -124,14 +161,15 @@ module design_1_Gripper_ctrl_0_0_Gripper_ctrl
         .I3(state[0]),
         .I4(state[2]),
         .O(state__0[2]));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
-    .INIT(32'hFFFF3332)) 
+    .INIT(32'hFFAEAEAE)) 
     \FSM_sequential_state[2]_i_3 
-       (.I0(mag_data[15]),
-        .I1(state[0]),
-        .I2(mag_data[13]),
-        .I3(mag_data[14]),
-        .I4(\FSM_sequential_state[2]_i_6_n_0 ),
+       (.I0(\FSM_sequential_state[2]_i_6_n_0 ),
+        .I1(mag_data[15]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(state[2]),
         .O(\FSM_sequential_state[2]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hAAAAAAAAFFFEAAAA)) 
@@ -149,21 +187,22 @@ module design_1_Gripper_ctrl_0_0_Gripper_ctrl
        (.I0(state[0]),
         .I1(btn),
         .O(\FSM_sequential_state[2]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT4 #(
-    .INIT(16'hBB3E)) 
+  LUT6 #(
+    .INIT(64'h000FFFFF000FFFFE)) 
     \FSM_sequential_state[2]_i_6 
-       (.I0(state[2]),
-        .I1(state[0]),
-        .I2(grip_close),
-        .I3(state[1]),
+       (.I0(mag_data[14]),
+        .I1(mag_data[13]),
+        .I2(state[1]),
+        .I3(grip_close),
+        .I4(state[0]),
+        .I5(state[2]),
         .O(\FSM_sequential_state[2]_i_6_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
     .INIT(32'h80000000)) 
     \FSM_sequential_state[2]_i_7 
-       (.I0(state[1]),
-        .I1(count_reg[3]),
+       (.I0(count_reg[3]),
+        .I1(state[1]),
         .I2(count_reg[2]),
         .I3(count_reg[0]),
         .I4(count_reg[1]),
@@ -288,52 +327,19 @@ module design_1_Gripper_ctrl_0_0_Gripper_ctrl
         .R(count0));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT4 #(
-    .INIT(16'h8BB8)) 
-    \percent[3]_i_1 
+    .INIT(16'hB88B)) 
+    \percent[2]_i_1 
        (.I0(percent),
         .I1(state[2]),
         .I2(state[0]),
         .I3(state[1]),
-        .O(\percent[3]_i_1_n_0 ));
-  FDRE \percent_reg[3] 
+        .O(\percent[2]_i_1_n_0 ));
+  FDRE \percent_reg[2] 
        (.C(clk),
         .CE(1'b1),
-        .D(\percent[3]_i_1_n_0 ),
+        .D(\percent[2]_i_1_n_0 ),
         .Q(percent),
         .R(1'b0));
-endmodule
-
-(* CHECK_LICENSE_TYPE = "design_1_Gripper_ctrl_0_0,Gripper_ctrl,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
-(* x_core_info = "Gripper_ctrl,Vivado 2021.1" *) 
-(* NotValidForBitStream *)
-module design_1_Gripper_ctrl_0_0
-   (grip_close,
-    clk,
-    mag_data,
-    percent,
-    btn);
-  input grip_close;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *) input clk;
-  input [15:0]mag_data;
-  output [3:0]percent;
-  input btn;
-
-  wire btn;
-  wire clk;
-  wire grip_close;
-  wire [15:0]mag_data;
-  wire [2:2]\^percent ;
-
-  assign percent[3] = \^percent [2];
-  assign percent[2] = \^percent [2];
-  assign percent[1] = \^percent [2];
-  assign percent[0] = \^percent [2];
-  design_1_Gripper_ctrl_0_0_Gripper_ctrl U0
-       (.btn(btn),
-        .clk(clk),
-        .grip_close(grip_close),
-        .mag_data(mag_data),
-        .percent(\^percent ));
 endmodule
 `ifndef GLBL
 `define GLBL

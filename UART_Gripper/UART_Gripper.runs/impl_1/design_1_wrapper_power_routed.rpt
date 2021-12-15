@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
-| Date             : Tue Dec 14 16:15:42 2021
+| Date             : Wed Dec 15 13:30:36 2021
 | Host             : Daniel-laptop running 64-bit Ubuntu 20.04.3 LTS
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 3.451        |
+| Total On-Chip Power (W)  | 4.591        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 3.249        |
-| Device Static (W)        | 0.203        |
+| Dynamic (W)              | 4.314        |
+| Device Static (W)        | 0.277        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 45.2         |
-| Junction Temperature (C) | 64.8         |
+| Max Ambient (C)          | 32.1         |
+| Junction Temperature (C) | 77.9         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.579 |      137 |       --- |             --- |
-|   LUT as Logic |     0.524 |       62 |     53200 |            0.12 |
-|   Register     |     0.025 |       39 |    106400 |            0.04 |
-|   CARRY4       |     0.024 |       10 |     13300 |            0.08 |
+| Slice Logic    |     0.592 |      139 |       --- |             --- |
+|   LUT as Logic |     0.536 |       63 |     53200 |            0.12 |
+|   CARRY4       |     0.026 |       10 |     13300 |            0.08 |
+|   Register     |     0.024 |       39 |    106400 |            0.04 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |        9 |       --- |             --- |
-| Signals        |     0.460 |       99 |       --- |             --- |
-| I/O            |     2.210 |        7 |       125 |            5.60 |
-| Static Power   |     0.203 |          |           |                 |
-| Total          |     3.451 |          |           |                 |
+| Signals        |     0.444 |      100 |       --- |             --- |
+| I/O            |     3.277 |        7 |       125 |            5.60 |
+| Static Power   |     0.277 |          |           |                 |
+| Total          |     4.591 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,20 +71,20 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     1.085 |       1.051 |      0.034 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.104 |       0.081 |      0.024 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.623 |       0.622 |      0.001 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     1.107 |       1.049 |      0.058 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.152 |       0.120 |      0.032 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.925 |       0.924 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.004 |       0.000 |      0.004 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccpint   |       1.000 |     0.060 |       0.000 |      0.060 |       NA    | Unspecified | NA         |
+| Vccpint   |       1.000 |     0.094 |       0.000 |      0.094 |       NA    | Unspecified | NA         |
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |       NA    | Unspecified | NA         |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |       NA    | Unspecified | NA         |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -145,15 +145,15 @@ Table of Contents
 +--------------------+-----------+
 | Name               | Power (W) |
 +--------------------+-----------+
-| design_1_wrapper   |     3.249 |
-|   design_1_i       |     1.013 |
-|     Gripper_ctrl_0 |     0.075 |
-|       U0           |     0.075 |
-|     PWM            |     0.752 |
-|       Comp_27_0    |     0.124 |
-|       Counter_27_0 |     0.628 |
-|     clk_divider_0  |     0.186 |
-|       U0           |     0.186 |
+| design_1_wrapper   |     4.314 |
+|   design_1_i       |     1.011 |
+|     Gripper_ctrl_0 |     0.079 |
+|       U0           |     0.079 |
+|     PWM            |     0.728 |
+|       Comp_27_0    |     0.132 |
+|       Counter_27_0 |     0.596 |
+|     clk_divider_0  |     0.203 |
+|       U0           |     0.203 |
 +--------------------+-----------+
 
 

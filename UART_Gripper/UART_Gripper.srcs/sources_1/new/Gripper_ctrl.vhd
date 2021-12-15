@@ -52,7 +52,7 @@ begin
         if rising_edge (clk) then
             case state is   
                 when "000" =>   -- S0   
-                    percent <= "0000";
+                    percent <= "1111";
                     if grip_close = '1' then
                         state <= "100";
                     elsif mag_data > "0001000000010000" then
@@ -60,7 +60,7 @@ begin
                     end if;
                     
                 when "001" =>   -- S1
-                    percent <= "1111";
+                    percent <= "1010";
                     count <= (others=>'0');
                     if btn <= '1' then
                         state <= "010";
@@ -70,7 +70,7 @@ begin
                     
                 when "010" =>   -- S2
                     count <= count + 1;
-                    percent <= "0000";
+                    percent <= "1111"; -- 
                     if count = 15 then
                         state <= "011";
                     end if;
@@ -81,7 +81,7 @@ begin
                     end if;
                     
                 when "100" =>   -- s4
-                    percent <= "1111";
+                    percent <= "1010";
                     if grip_close = '0' then
                         state <= "000"; 
                     end if;

@@ -1,10 +1,10 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2021.1.1 (lin64) Build 3286242 Wed Jul 28 13:09:46 MDT 2021
-// Date        : Mon Oct 25 17:20:32 2021
-// Host        : adm-127190 running 64-bit Ubuntu 20.04.3 LTS
+// Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+// Date        : Wed Dec 15 15:40:42 2021
+// Host        : Daniel-laptop running 64-bit Ubuntu 20.04.3 LTS
 // Command     : write_verilog -force -mode funcsim
-//               /home/esme/Desktop/VivadoProjects/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/ip/design_top_CTRL_0_0/design_top_CTRL_0_0_sim_netlist.v
+//               /home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/ip/design_top_CTRL_0_0/design_top_CTRL_0_0_sim_netlist.v
 // Design      : design_top_CTRL_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,7 +13,7 @@
 `timescale 1 ps / 1 ps
 
 (* CHECK_LICENSE_TYPE = "design_top_CTRL_0_0,CTRL,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
-(* x_core_info = "CTRL,Vivado 2021.1.1" *) 
+(* x_core_info = "CTRL,Vivado 2021.1" *) 
 (* NotValidForBitStream *)
 module design_top_CTRL_0_0
    (clk,
@@ -26,7 +26,7 @@ module design_top_CTRL_0_0
     SCLK,
     MOSI,
     MISO);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, INSERT_VIP 0" *) input clk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *) input clk;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 rst RST" *) (* x_interface_parameter = "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input rst;
   input en;
   input [7:0]addr1;
@@ -121,10 +121,9 @@ module design_top_CTRL_0_0_CTRL
   wire \addr_reg[6]_i_1_n_0 ;
   wire \addr_reg[7]_i_2_n_0 ;
   wire addr_reg_conf0;
-  wire \addr_reg_conf[10]_i_1_n_0 ;
+  wire \addr_reg_conf[11]_i_1_n_0 ;
   wire \addr_reg_conf[15]_i_1_n_0 ;
   wire \addr_reg_conf[8]_i_1_n_0 ;
-  wire \addr_reg_conf[9]_i_1_n_0 ;
   wire clk;
   wire conf_flag;
   wire conf_flag__0;
@@ -492,14 +491,14 @@ module design_top_CTRL_0_0_CTRL
         .O(\addr_reg[7]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFECEF0000ECEC)) 
-    \addr_reg_conf[10]_i_1 
-       (.I0(in11[10]),
+    \addr_reg_conf[11]_i_1 
+       (.I0(in11[11]),
         .I1(\FSM_onehot_current_state_reg_n_0_[1] ),
         .I2(\FSM_onehot_current_state_reg_n_0_[2] ),
         .I3(\FSM_onehot_current_state_reg_n_0_[0] ),
         .I4(rst),
-        .I5(in11[11]),
-        .O(\addr_reg_conf[10]_i_1_n_0 ));
+        .I5(in11[12]),
+        .O(\addr_reg_conf[11]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h0054)) 
     \addr_reg_conf[15]_i_1 
@@ -525,32 +524,22 @@ module design_top_CTRL_0_0_CTRL
         .I3(rst),
         .I4(in11[9]),
         .O(\addr_reg_conf[8]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFECEF0000ECEC)) 
-    \addr_reg_conf[9]_i_1 
-       (.I0(in11[9]),
-        .I1(\FSM_onehot_current_state_reg_n_0_[1] ),
-        .I2(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I3(\FSM_onehot_current_state_reg_n_0_[0] ),
-        .I4(rst),
-        .I5(in11[10]),
-        .O(\addr_reg_conf[9]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \addr_reg_conf_reg[10] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\addr_reg_conf[10]_i_1_n_0 ),
+        .CE(addr_reg_conf0),
+        .D(in11[10]),
         .Q(in11[11]),
-        .R(1'b0));
+        .R(\addr_reg_conf[15]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \addr_reg_conf_reg[11] 
        (.C(clk),
-        .CE(addr_reg_conf0),
-        .D(in11[11]),
+        .CE(1'b1),
+        .D(\addr_reg_conf[11]_i_1_n_0 ),
         .Q(in11[12]),
-        .R(\addr_reg_conf[15]_i_1_n_0 ));
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \addr_reg_conf_reg[12] 
@@ -595,10 +584,10 @@ module design_top_CTRL_0_0_CTRL
     .INIT(1'b1)) 
     \addr_reg_conf_reg[9] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\addr_reg_conf[9]_i_1_n_0 ),
+        .CE(addr_reg_conf0),
+        .D(in11[9]),
         .Q(in11[10]),
-        .R(1'b0));
+        .R(\addr_reg_conf[15]_i_1_n_0 ));
   FDCE \addr_reg_reg[0] 
        (.C(clk),
         .CE(addr_reg),

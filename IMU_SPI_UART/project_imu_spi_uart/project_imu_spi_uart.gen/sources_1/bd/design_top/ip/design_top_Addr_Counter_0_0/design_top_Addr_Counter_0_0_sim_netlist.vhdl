@@ -1,10 +1,10 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2021.1.1 (lin64) Build 3286242 Wed Jul 28 13:09:46 MDT 2021
--- Date        : Mon Oct 25 17:20:34 2021
--- Host        : adm-127190 running 64-bit Ubuntu 20.04.3 LTS
+-- Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+-- Date        : Wed Dec 15 14:57:46 2021
+-- Host        : Daniel-laptop running 64-bit Ubuntu 20.04.3 LTS
 -- Command     : write_vhdl -force -mode funcsim
---               /home/esme/Desktop/VivadoProjects/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/ip/design_top_Addr_Counter_0_0/design_top_Addr_Counter_0_0_sim_netlist.vhdl
+--               /home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/ip/design_top_Addr_Counter_0_0/design_top_Addr_Counter_0_0_sim_netlist.vhdl
 -- Design      : design_top_Addr_Counter_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,7 +16,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_top_Addr_Counter_0_0_Addr_Counter is
   port (
-    addr : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    addr : out STD_LOGIC_VECTOR ( 4 downto 0 );
     en : in STD_LOGIC;
     clk : in STD_LOGIC;
     rst : in STD_LOGIC
@@ -26,15 +26,15 @@ entity design_top_Addr_Counter_0_0_Addr_Counter is
 end design_top_Addr_Counter_0_0_Addr_Counter;
 
 architecture STRUCTURE of design_top_Addr_Counter_0_0_Addr_Counter is
-  signal \^addr\ : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal plusOp : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \^addr\ : STD_LOGIC_VECTOR ( 4 downto 0 );
+  signal plusOp : STD_LOGIC_VECTOR ( 4 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \count_bin[0]_i_1\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \count_bin[1]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \count_bin[2]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \count_bin[2]_i_1\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \count_bin[3]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \count_bin[4]_i_1\ : label is "soft_lutpair0";
 begin
-  addr(3 downto 0) <= \^addr\(3 downto 0);
+  addr(4 downto 0) <= \^addr\(4 downto 0);
 \count_bin[0]_i_1\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
@@ -73,6 +73,18 @@ begin
       I3 => \^addr\(3),
       O => plusOp(3)
     );
+\count_bin[4]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"7FFF8000"
+    )
+        port map (
+      I0 => \^addr\(2),
+      I1 => \^addr\(0),
+      I2 => \^addr\(1),
+      I3 => \^addr\(3),
+      I4 => \^addr\(4),
+      O => plusOp(4)
+    );
 \count_bin_reg[0]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
@@ -105,6 +117,14 @@ begin
       D => plusOp(3),
       Q => \^addr\(3)
     );
+\count_bin_reg[4]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => en,
+      CLR => rst,
+      D => plusOp(4),
+      Q => \^addr\(4)
+    );
 end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -115,7 +135,7 @@ entity design_top_Addr_Counter_0_0 is
     clk : in STD_LOGIC;
     rst : in STD_LOGIC;
     en : in STD_LOGIC;
-    addr : out STD_LOGIC_VECTOR ( 3 downto 0 )
+    addr : out STD_LOGIC_VECTOR ( 4 downto 0 )
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of design_top_Addr_Counter_0_0 : entity is true;
@@ -126,20 +146,20 @@ entity design_top_Addr_Counter_0_0 is
   attribute ip_definition_source : string;
   attribute ip_definition_source of design_top_Addr_Counter_0_0 : entity is "module_ref";
   attribute x_core_info : string;
-  attribute x_core_info of design_top_Addr_Counter_0_0 : entity is "Addr_Counter,Vivado 2021.1.1";
+  attribute x_core_info of design_top_Addr_Counter_0_0 : entity is "Addr_Counter,Vivado 2021.1";
 end design_top_Addr_Counter_0_0;
 
 architecture STRUCTURE of design_top_Addr_Counter_0_0 is
   attribute x_interface_info : string;
   attribute x_interface_info of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute x_interface_parameter : string;
-  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, INSERT_VIP 0";
+  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0";
   attribute x_interface_info of rst : signal is "xilinx.com:signal:reset:1.0 rst RST";
   attribute x_interface_parameter of rst : signal is "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
 begin
 U0: entity work.design_top_Addr_Counter_0_0_Addr_Counter
      port map (
-      addr(3 downto 0) => addr(3 downto 0),
+      addr(4 downto 0) => addr(4 downto 0),
       clk => clk,
       en => en,
       rst => rst

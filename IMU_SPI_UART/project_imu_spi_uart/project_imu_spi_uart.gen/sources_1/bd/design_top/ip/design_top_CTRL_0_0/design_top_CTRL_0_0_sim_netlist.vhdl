@@ -1,10 +1,10 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2021.1.1 (lin64) Build 3286242 Wed Jul 28 13:09:46 MDT 2021
--- Date        : Mon Oct 25 17:20:33 2021
--- Host        : adm-127190 running 64-bit Ubuntu 20.04.3 LTS
+-- Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+-- Date        : Wed Dec 15 15:40:42 2021
+-- Host        : Daniel-laptop running 64-bit Ubuntu 20.04.3 LTS
 -- Command     : write_vhdl -force -mode funcsim
---               /home/esme/Desktop/VivadoProjects/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/ip/design_top_CTRL_0_0/design_top_CTRL_0_0_sim_netlist.vhdl
+--               /home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/ip/design_top_CTRL_0_0/design_top_CTRL_0_0_sim_netlist.vhdl
 -- Design      : design_top_CTRL_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -65,10 +65,9 @@ architecture STRUCTURE of design_top_CTRL_0_0_CTRL is
   signal \addr_reg[6]_i_1_n_0\ : STD_LOGIC;
   signal \addr_reg[7]_i_2_n_0\ : STD_LOGIC;
   signal addr_reg_conf0 : STD_LOGIC;
-  signal \addr_reg_conf[10]_i_1_n_0\ : STD_LOGIC;
+  signal \addr_reg_conf[11]_i_1_n_0\ : STD_LOGIC;
   signal \addr_reg_conf[15]_i_1_n_0\ : STD_LOGIC;
   signal \addr_reg_conf[8]_i_1_n_0\ : STD_LOGIC;
-  signal \addr_reg_conf[9]_i_1_n_0\ : STD_LOGIC;
   signal conf_flag : STD_LOGIC;
   signal \conf_flag__0\ : STD_LOGIC;
   signal \count[0]_i_1_n_0\ : STD_LOGIC;
@@ -569,18 +568,18 @@ SCLK_reg_i_3: unisim.vcomponents.LUT6
       I2 => \FSM_onehot_current_state_reg_n_0_[0]\,
       O => \addr_reg[7]_i_2_n_0\
     );
-\addr_reg_conf[10]_i_1\: unisim.vcomponents.LUT6
+\addr_reg_conf[11]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFFFECEF0000ECEC"
     )
         port map (
-      I0 => in11(10),
+      I0 => in11(11),
       I1 => \FSM_onehot_current_state_reg_n_0_[1]\,
       I2 => \FSM_onehot_current_state_reg_n_0_[2]\,
       I3 => \FSM_onehot_current_state_reg_n_0_[0]\,
       I4 => rst,
-      I5 => in11(11),
-      O => \addr_reg_conf[10]_i_1_n_0\
+      I5 => in11(12),
+      O => \addr_reg_conf[11]_i_1_n_0\
     );
 \addr_reg_conf[15]_i_1\: unisim.vcomponents.LUT4
     generic map(
@@ -616,29 +615,16 @@ SCLK_reg_i_3: unisim.vcomponents.LUT6
       I4 => in11(9),
       O => \addr_reg_conf[8]_i_1_n_0\
     );
-\addr_reg_conf[9]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFECEF0000ECEC"
-    )
-        port map (
-      I0 => in11(9),
-      I1 => \FSM_onehot_current_state_reg_n_0_[1]\,
-      I2 => \FSM_onehot_current_state_reg_n_0_[2]\,
-      I3 => \FSM_onehot_current_state_reg_n_0_[0]\,
-      I4 => rst,
-      I5 => in11(10),
-      O => \addr_reg_conf[9]_i_1_n_0\
-    );
 \addr_reg_conf_reg[10]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
-      CE => '1',
-      D => \addr_reg_conf[10]_i_1_n_0\,
+      CE => addr_reg_conf0,
+      D => in11(10),
       Q => in11(11),
-      R => '0'
+      R => \addr_reg_conf[15]_i_1_n_0\
     );
 \addr_reg_conf_reg[11]\: unisim.vcomponents.FDRE
     generic map(
@@ -646,10 +632,10 @@ SCLK_reg_i_3: unisim.vcomponents.LUT6
     )
         port map (
       C => clk,
-      CE => addr_reg_conf0,
-      D => in11(11),
+      CE => '1',
+      D => \addr_reg_conf[11]_i_1_n_0\,
       Q => in11(12),
-      R => \addr_reg_conf[15]_i_1_n_0\
+      R => '0'
     );
 \addr_reg_conf_reg[12]\: unisim.vcomponents.FDRE
     generic map(
@@ -712,10 +698,10 @@ SCLK_reg_i_3: unisim.vcomponents.LUT6
     )
         port map (
       C => clk,
-      CE => '1',
-      D => \addr_reg_conf[9]_i_1_n_0\,
+      CE => addr_reg_conf0,
+      D => in11(9),
       Q => in11(10),
-      R => '0'
+      R => \addr_reg_conf[15]_i_1_n_0\
     );
 \addr_reg_reg[0]\: unisim.vcomponents.FDCE
      port map (
@@ -1346,14 +1332,14 @@ entity design_top_CTRL_0_0 is
   attribute ip_definition_source : string;
   attribute ip_definition_source of design_top_CTRL_0_0 : entity is "module_ref";
   attribute x_core_info : string;
-  attribute x_core_info of design_top_CTRL_0_0 : entity is "CTRL,Vivado 2021.1.1";
+  attribute x_core_info of design_top_CTRL_0_0 : entity is "CTRL,Vivado 2021.1";
 end design_top_CTRL_0_0;
 
 architecture STRUCTURE of design_top_CTRL_0_0 is
   attribute x_interface_info : string;
   attribute x_interface_info of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute x_interface_parameter : string;
-  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, INSERT_VIP 0";
+  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0";
   attribute x_interface_info of rst : signal is "xilinx.com:signal:reset:1.0 rst RST";
   attribute x_interface_parameter of rst : signal is "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
 begin

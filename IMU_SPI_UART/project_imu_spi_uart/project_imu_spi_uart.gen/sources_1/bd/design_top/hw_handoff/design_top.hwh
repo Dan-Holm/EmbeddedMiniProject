@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Oct 25 17:27:00 2021" VIVADOVERSION="2021.1.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Dec 15 15:39:04 2021" VIVADOVERSION="2021.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="design_top" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -16,8 +16,8 @@
         <CONNECTION INSTANCE="Address_handler_Addr_Counter_0" PORT="rst"/>
         <CONNECTION INSTANCE="UART_TX_tx_mod_0" PORT="rst"/>
         <CONNECTION INSTANCE="UART_TX_clk_divider_UART_0" PORT="rst"/>
-        <CONNECTION INSTANCE="IMU_CTRL" PORT="rst"/>
         <CONNECTION INSTANCE="clk_divider" PORT="rst"/>
+        <CONNECTION INSTANCE="IMU_CTRL" PORT="rst"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="en" SIGIS="undef" SIGNAME="External_Ports_en">
@@ -45,9 +45,9 @@
         <CONNECTION INSTANCE="IMU_CTRL" PORT="SCLK"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="7" NAME="LEDs" RIGHT="0" SIGIS="undef" SIGNAME="IMU_CTRL_data1">
+    <PORT DIR="O" LEFT="7" NAME="LEDs" RIGHT="0" SIGIS="undef" SIGNAME="Address_handler_Addr_ctrl_0_dout">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="IMU_CTRL" PORT="data1"/>
+        <CONNECTION INSTANCE="Address_handler_Addr_ctrl_0" PORT="dout"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="next_reg_switch" SIGIS="undef" SIGNAME="External_Ports_next_reg_switch">
@@ -87,7 +87,7 @@
             <CONNECTION INSTANCE="Address_handler_fsm_intr_0" PORT="intr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="addr" RIGHT="0" SIGIS="undef" SIGNAME="Address_handler_Addr_Counter_0_addr">
+        <PORT DIR="O" LEFT="4" NAME="addr" RIGHT="0" SIGIS="undef" SIGNAME="Address_handler_Addr_Counter_0_addr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Address_handler_Addr_ctrl_0" PORT="addr"/>
           </CONNECTIONS>
@@ -107,13 +107,14 @@
             <CONNECTION INSTANCE="clk_divider" PORT="clk_div"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="addr" RIGHT="0" SIGIS="undef" SIGNAME="Address_handler_Addr_Counter_0_addr">
+        <PORT DIR="I" LEFT="4" NAME="addr" RIGHT="0" SIGIS="undef" SIGNAME="Address_handler_Addr_Counter_0_addr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Address_handler_Addr_Counter_0" PORT="addr"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="Address_handler_Addr_ctrl_0_dout">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="LEDs"/>
             <CONNECTION INSTANCE="IMU_CTRL" PORT="addr1"/>
           </CONNECTIONS>
         </PORT>
@@ -179,7 +180,6 @@
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="data1" RIGHT="0" SIGIS="undef" SIGNAME="IMU_CTRL_data1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="LEDs"/>
             <CONNECTION INSTANCE="UART_TX_tx_mod_0" PORT="data_in"/>
           </CONNECTIONS>
         </PORT>
@@ -291,8 +291,8 @@
         </PORT>
         <PORT DIR="O" NAME="clk_div" SIGIS="undef" SIGNAME="clk_divider_clk_div">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Address_handler_Addr_Counter_0" PORT="clk"/>
             <CONNECTION INSTANCE="Address_handler_fsm_intr_0" PORT="clk"/>
+            <CONNECTION INSTANCE="Address_handler_Addr_Counter_0" PORT="clk"/>
             <CONNECTION INSTANCE="Address_handler_Addr_ctrl_0" PORT="clk"/>
             <CONNECTION INSTANCE="IMU_CTRL" PORT="clk"/>
           </CONNECTIONS>

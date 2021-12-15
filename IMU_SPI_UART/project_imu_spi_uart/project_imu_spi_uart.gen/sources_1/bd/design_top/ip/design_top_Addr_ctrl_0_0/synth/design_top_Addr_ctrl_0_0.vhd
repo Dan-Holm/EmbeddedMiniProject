@@ -56,7 +56,7 @@ USE ieee.numeric_std.ALL;
 ENTITY design_top_Addr_ctrl_0_0 IS
   PORT (
     clk : IN STD_LOGIC;
-    addr : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    addr : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
     dout : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
   );
 END design_top_Addr_ctrl_0_0;
@@ -67,21 +67,21 @@ ARCHITECTURE design_top_Addr_ctrl_0_0_arch OF design_top_Addr_ctrl_0_0 IS
   COMPONENT Addr_ctrl IS
     PORT (
       clk : IN STD_LOGIC;
-      addr : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+      addr : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
       dout : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
     );
   END COMPONENT Addr_ctrl;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF design_top_Addr_ctrl_0_0_arch: ARCHITECTURE IS "Addr_ctrl,Vivado 2021.1.1";
+  ATTRIBUTE X_CORE_INFO OF design_top_Addr_ctrl_0_0_arch: ARCHITECTURE IS "Addr_ctrl,Vivado 2021.1";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_top_Addr_ctrl_0_0_arch : ARCHITECTURE IS "design_top_Addr_ctrl_0_0,Addr_ctrl,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_top_Addr_ctrl_0_0_arch: ARCHITECTURE IS "design_top_Addr_ctrl_0_0,Addr_ctrl,{x_ipProduct=Vivado 2021.1.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=Addr_ctrl,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED}";
+  ATTRIBUTE CORE_GENERATION_INFO OF design_top_Addr_ctrl_0_0_arch: ARCHITECTURE IS "design_top_Addr_ctrl_0_0,Addr_ctrl,{x_ipProduct=Vivado 2021.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=Addr_ctrl,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF design_top_Addr_ctrl_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clk CLK";
 BEGIN
   U0 : Addr_ctrl

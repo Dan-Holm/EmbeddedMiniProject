@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
-// Date        : Tue Dec 14 16:11:34 2021
+// Date        : Wed Dec 15 13:29:03 2021
 // Host        : Daniel-laptop running 64-bit Ubuntu 20.04.3 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/ip/design_1_LUT_0_0/design_1_LUT_0_0_sim_netlist.v
@@ -35,18 +35,26 @@ module design_1_LUT_0_0
   GND GND
        (.G(\<const0> ));
   design_1_LUT_0_0_LUT U0
-       (.bits(\^bits ),
+       (.bits({\^bits [21:17],\^bits [15:1]}),
         .percent(percent));
+  LUT4 #(
+    .INIT(16'h003E)) 
+    \bits[16]_INST_0 
+       (.I0(percent[0]),
+        .I1(percent[1]),
+        .I2(percent[2]),
+        .I3(percent[3]),
+        .O(\^bits [16]));
 endmodule
 
 (* ORIG_REF_NAME = "LUT" *) 
 module design_1_LUT_0_0_LUT
    (bits,
     percent);
-  output [20:0]bits;
+  output [19:0]bits;
   input [3:0]percent;
 
-  wire [20:0]bits;
+  wire [19:0]bits;
   wire [3:0]percent;
 
   (* SOFT_HLUTNM = "soft_lutpair9" *) 
@@ -57,14 +65,14 @@ module design_1_LUT_0_0_LUT
         .I1(percent[1]),
         .I2(percent[2]),
         .O(bits[9]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT4 #(
-    .INIT(16'h08A8)) 
+    .INIT(16'h2280)) 
     \bits[11]_INST_0 
        (.I0(percent[3]),
-        .I1(percent[1]),
-        .I2(percent[2]),
-        .I3(percent[0]),
+        .I1(percent[0]),
+        .I2(percent[1]),
+        .I3(percent[2]),
         .O(bits[10]));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT4 #(
@@ -75,7 +83,7 @@ module design_1_LUT_0_0_LUT
         .I2(percent[3]),
         .I3(percent[0]),
         .O(bits[11]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'h2F80)) 
     \bits[13]_INST_0 
@@ -86,16 +94,16 @@ module design_1_LUT_0_0_LUT
         .O(bits[12]));
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
-    .INIT(16'h47F0)) 
+    .INIT(16'h47F8)) 
     \bits[14]_INST_0 
        (.I0(percent[1]),
         .I1(percent[3]),
         .I2(percent[2]),
         .I3(percent[0]),
         .O(bits[13]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
-    .INIT(16'hC512)) 
+    .INIT(16'hC712)) 
     \bits[15]_INST_0 
        (.I0(percent[3]),
         .I1(percent[2]),
@@ -104,22 +112,13 @@ module design_1_LUT_0_0_LUT
         .O(bits[14]));
   (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
-    .INIT(16'h1534)) 
-    \bits[16]_INST_0 
-       (.I0(percent[3]),
-        .I1(percent[2]),
-        .I2(percent[1]),
-        .I3(percent[0]),
-        .O(bits[15]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT4 #(
     .INIT(16'hFDFE)) 
     \bits[17]_INST_0 
        (.I0(percent[3]),
         .I1(percent[2]),
         .I2(percent[0]),
         .I3(percent[1]),
-        .O(bits[16]));
+        .O(bits[15]));
   (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT4 #(
     .INIT(16'h0056)) 
@@ -128,7 +127,7 @@ module design_1_LUT_0_0_LUT
         .I1(percent[2]),
         .I2(percent[1]),
         .I3(percent[0]),
-        .O(bits[17]));
+        .O(bits[16]));
   (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT4 #(
     .INIT(16'h5006)) 
@@ -137,7 +136,7 @@ module design_1_LUT_0_0_LUT
         .I1(percent[2]),
         .I2(percent[1]),
         .I3(percent[0]),
-        .O(bits[18]));
+        .O(bits[17]));
   (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
     .INIT(8'h80)) 
@@ -154,7 +153,7 @@ module design_1_LUT_0_0_LUT
         .I1(percent[2]),
         .I2(percent[0]),
         .I3(percent[1]),
-        .O(bits[19]));
+        .O(bits[18]));
   (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT4 #(
     .INIT(16'h0020)) 
@@ -163,7 +162,7 @@ module design_1_LUT_0_0_LUT
         .I1(percent[2]),
         .I2(percent[0]),
         .I3(percent[1]),
-        .O(bits[20]));
+        .O(bits[19]));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
     .INIT(16'hA080)) 
@@ -184,16 +183,16 @@ module design_1_LUT_0_0_LUT
         .O(bits[2]));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
-    .INIT(16'h7F40)) 
+    .INIT(16'h7F60)) 
     \bits[4]_INST_0 
-       (.I0(percent[1]),
-        .I1(percent[2]),
+       (.I0(percent[2]),
+        .I1(percent[1]),
         .I2(percent[3]),
         .I3(percent[0]),
         .O(bits[3]));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
-    .INIT(16'h9F20)) 
+    .INIT(16'h8F20)) 
     \bits[5]_INST_0 
        (.I0(percent[2]),
         .I1(percent[0]),
@@ -202,20 +201,23 @@ module design_1_LUT_0_0_LUT
         .O(bits[4]));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
-    .INIT(16'h7F00)) 
+    .INIT(16'h7F20)) 
     \bits[6]_INST_0 
        (.I0(percent[1]),
         .I1(percent[0]),
         .I2(percent[3]),
         .I3(percent[2]),
         .O(bits[5]));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \bits[7]_INST_0 
-       (.I0(percent[3]),
-        .I1(percent[0]),
-        .O(bits[6]));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT4 #(
+    .INIT(16'h0FB0)) 
+    \bits[7]_INST_0 
+       (.I0(percent[2]),
+        .I1(percent[1]),
+        .I2(percent[3]),
+        .I3(percent[0]),
+        .O(bits[6]));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT4 #(
     .INIT(16'hDF60)) 
     \bits[8]_INST_0 
@@ -226,10 +228,10 @@ module design_1_LUT_0_0_LUT
         .O(bits[7]));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT4 #(
-    .INIT(16'hEF00)) 
+    .INIT(16'hEF20)) 
     \bits[9]_INST_0 
-       (.I0(percent[0]),
-        .I1(percent[1]),
+       (.I0(percent[1]),
+        .I1(percent[0]),
         .I2(percent[3]),
         .I3(percent[2]),
         .O(bits[8]));

@@ -369,11 +369,11 @@ proc create_root_design { parentCell } {
    }
   
   # Create port connections
-  connect_bd_net -net Addr_ctrl_0_dout [get_bd_pins Address_handler/dout] [get_bd_pins IMU_CTRL/addr1]
+  connect_bd_net -net Address_handler_dout [get_bd_ports LEDs] [get_bd_pins Address_handler/dout] [get_bd_pins IMU_CTRL/addr1]
   connect_bd_net -net CTRL_0_CS [get_bd_ports CS] [get_bd_pins IMU_CTRL/cs]
   connect_bd_net -net CTRL_0_MOSI [get_bd_ports MOSI] [get_bd_pins IMU_CTRL/MOSI]
   connect_bd_net -net CTRL_0_SCLK [get_bd_ports SCLK] [get_bd_pins IMU_CTRL/SCLK]
-  connect_bd_net -net CTRL_0_data1 [get_bd_ports LEDs] [get_bd_pins IMU_CTRL/data1] [get_bd_pins UART_TX/data1]
+  connect_bd_net -net IMU_CTRL_data1 [get_bd_pins IMU_CTRL/data1] [get_bd_pins UART_TX/data1]
   connect_bd_net -net MISO_0_1 [get_bd_ports MISO] [get_bd_pins IMU_CTRL/MISO]
   connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins UART_TX/clk] [get_bd_pins clk_divider/clk]
   connect_bd_net -net clk_divider_0_clk_div [get_bd_pins Address_handler/clk] [get_bd_pins IMU_CTRL/clk] [get_bd_pins clk_divider/clk_div]

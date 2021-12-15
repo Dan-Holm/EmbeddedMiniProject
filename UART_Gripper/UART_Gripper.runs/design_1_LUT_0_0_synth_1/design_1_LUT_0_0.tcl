@@ -71,6 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "design_1_LUT_0_0_synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 2
+set_param xicom.use_bs_reader 1
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 set_param ips.modRefOverrideMrefDirPath /home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/mref

@@ -2,8 +2,8 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Tue Dec 14 13:56:22 2021
-# Process ID: 17395
+# Start of session at: Wed Dec 15 16:02:06 2021
+# Process ID: 60471
 # Current directory: /home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1
 # Command line: vivado -log design_top_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_top_wrapper.tcl
 # Log file: /home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/design_top_wrapper.vds

@@ -35,12 +35,12 @@ entity Addr_Counter is
     Port ( clk : in STD_LOGIC;
            rst : in STD_LOGIC;
            en : in STD_LOGIC;
-           addr : out STD_LOGIC_VECTOR (3 downto 0));
+           addr : out STD_LOGIC_VECTOR (4 downto 0));
 end Addr_Counter;
 
 architecture Behavioral of Addr_Counter is
 
-signal count_bin: unsigned(3 downto 0);
+signal count_bin: unsigned(4 downto 0);
 begin
     process(clk,rst)
         begin

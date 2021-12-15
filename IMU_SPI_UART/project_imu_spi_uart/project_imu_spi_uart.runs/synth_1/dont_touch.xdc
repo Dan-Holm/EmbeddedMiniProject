@@ -9,11 +9,11 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_top 
 # IP: bd/design_top/ip/design_top_CTRL_0_0/design_top_CTRL_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_top_CTRL_0_0 || ORIG_REF_NAME==design_top_CTRL_0_0} -quiet] -quiet
 
-# IP: bd/design_top/ip/design_top_Addr_Counter_0_0/design_top_Addr_Counter_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_top_Addr_Counter_0_0 || ORIG_REF_NAME==design_top_Addr_Counter_0_0} -quiet] -quiet
-
 # IP: bd/design_top/ip/design_top_fsm_intr_0_0/design_top_fsm_intr_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_top_fsm_intr_0_0 || ORIG_REF_NAME==design_top_fsm_intr_0_0} -quiet] -quiet
+
+# IP: bd/design_top/ip/design_top_Addr_Counter_0_0/design_top_Addr_Counter_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_top_Addr_Counter_0_0 || ORIG_REF_NAME==design_top_Addr_Counter_0_0} -quiet] -quiet
 
 # IP: bd/design_top/ip/design_top_Addr_ctrl_0_0/design_top_Addr_ctrl_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_top_Addr_ctrl_0_0 || ORIG_REF_NAME==design_top_Addr_ctrl_0_0} -quiet] -quiet

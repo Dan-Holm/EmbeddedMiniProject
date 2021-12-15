@@ -1,8 +1,8 @@
 --Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2021.1.1 (lin64) Build 3286242 Wed Jul 28 13:09:46 MDT 2021
---Date        : Mon Oct 25 17:27:00 2021
---Host        : adm-127190 running 64-bit Ubuntu 20.04.3 LTS
+--Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+--Date        : Wed Dec 15 15:39:03 2021
+--Host        : Daniel-laptop running 64-bit Ubuntu 20.04.3 LTS
 --Command     : generate_target design_top.bd
 --Design      : design_top
 --Purpose     : IP block netlist
@@ -21,14 +21,6 @@ entity Address_handler_imp_1YP68T6 is
 end Address_handler_imp_1YP68T6;
 
 architecture STRUCTURE of Address_handler_imp_1YP68T6 is
-  component design_top_Addr_Counter_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    rst : in STD_LOGIC;
-    en : in STD_LOGIC;
-    addr : out STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  end component design_top_Addr_Counter_0_0;
   component design_top_fsm_intr_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -37,14 +29,22 @@ architecture STRUCTURE of Address_handler_imp_1YP68T6 is
     intr : out STD_LOGIC
   );
   end component design_top_fsm_intr_0_0;
+  component design_top_Addr_Counter_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    rst : in STD_LOGIC;
+    en : in STD_LOGIC;
+    addr : out STD_LOGIC_VECTOR ( 4 downto 0 )
+  );
+  end component design_top_Addr_Counter_0_0;
   component design_top_Addr_ctrl_0_0 is
   port (
     clk : in STD_LOGIC;
-    addr : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    addr : in STD_LOGIC_VECTOR ( 4 downto 0 );
     dout : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component design_top_Addr_ctrl_0_0;
-  signal Addr_Counter_0_addr : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal Addr_Counter_0_addr : STD_LOGIC_VECTOR ( 4 downto 0 );
   signal Addr_ctrl_0_dout : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal clk_divider_0_clk_div : STD_LOGIC;
   signal fsm_intr_0_intr : STD_LOGIC;
@@ -57,14 +57,14 @@ begin
   strobe_0_1 <= next_reg;
 Addr_Counter_0: component design_top_Addr_Counter_0_0
      port map (
-      addr(3 downto 0) => Addr_Counter_0_addr(3 downto 0),
+      addr(4 downto 0) => Addr_Counter_0_addr(4 downto 0),
       clk => clk_divider_0_clk_div,
       en => fsm_intr_0_intr,
       rst => rst_0_1
     );
 Addr_ctrl_0: component design_top_Addr_ctrl_0_0
      port map (
-      addr(3 downto 0) => Addr_Counter_0_addr(3 downto 0),
+      addr(4 downto 0) => Addr_Counter_0_addr(4 downto 0),
       clk => clk_divider_0_clk_div,
       dout(7 downto 0) => Addr_ctrl_0_dout(7 downto 0)
     );
@@ -161,6 +161,13 @@ entity design_top is
 end design_top;
 
 architecture STRUCTURE of design_top is
+  component design_top_clk_divider_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    rst : in STD_LOGIC;
+    clk_div : out STD_LOGIC
+  );
+  end component design_top_clk_divider_0_0;
   component design_top_CTRL_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -175,18 +182,11 @@ architecture STRUCTURE of design_top is
     MISO : in STD_LOGIC
   );
   end component design_top_CTRL_0_0;
-  component design_top_clk_divider_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    rst : in STD_LOGIC;
-    clk_div : out STD_LOGIC
-  );
-  end component design_top_clk_divider_0_0;
-  signal Addr_ctrl_0_dout : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal Address_handler_dout : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal CTRL_0_CS : STD_LOGIC;
   signal CTRL_0_MOSI : STD_LOGIC;
   signal CTRL_0_SCLK : STD_LOGIC;
-  signal CTRL_0_data1 : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal IMU_CTRL_data1 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal MISO_0_1 : STD_LOGIC;
   signal clk_1 : STD_LOGIC;
   signal clk_divider_0_clk_div : STD_LOGIC;
@@ -203,7 +203,7 @@ architecture STRUCTURE of design_top is
   attribute X_INTERFACE_PARAMETER of rst : signal is "XIL_INTERFACENAME RST.RST, INSERT_VIP 0, POLARITY ACTIVE_LOW";
 begin
   CS <= CTRL_0_CS;
-  LEDs(7 downto 0) <= CTRL_0_data1(7 downto 0);
+  LEDs(7 downto 0) <= Address_handler_dout(7 downto 0);
   MISO_0_1 <= MISO;
   MOSI <= CTRL_0_MOSI;
   SCLK <= CTRL_0_SCLK;
@@ -215,7 +215,7 @@ begin
 Address_handler: entity work.Address_handler_imp_1YP68T6
      port map (
       clk => clk_divider_0_clk_div,
-      dout(7 downto 0) => Addr_ctrl_0_dout(7 downto 0),
+      dout(7 downto 0) => Address_handler_dout(7 downto 0),
       next_reg => strobe_0_1,
       rst => rst_0_1
     );
@@ -224,10 +224,10 @@ IMU_CTRL: component design_top_CTRL_0_0
       MISO => MISO_0_1,
       MOSI => CTRL_0_MOSI,
       SCLK => CTRL_0_SCLK,
-      addr1(7 downto 0) => Addr_ctrl_0_dout(7 downto 0),
+      addr1(7 downto 0) => Address_handler_dout(7 downto 0),
       clk => clk_divider_0_clk_div,
       cs => CTRL_0_CS,
-      data1(7 downto 0) => CTRL_0_data1(7 downto 0),
+      data1(7 downto 0) => IMU_CTRL_data1(7 downto 0),
       data_ready => shift_load_1,
       en => en_0_1,
       rst => rst_0_1
@@ -235,7 +235,7 @@ IMU_CTRL: component design_top_CTRL_0_0
 UART_TX: entity work.UART_TX_imp_12I32OE
      port map (
       clk => clk_1,
-      data1(7 downto 0) => CTRL_0_data1(7 downto 0),
+      data1(7 downto 0) => IMU_CTRL_data1(7 downto 0),
       rst => rst_0_1,
       shift_load => shift_load_1,
       sout => tx_mod_0_sout

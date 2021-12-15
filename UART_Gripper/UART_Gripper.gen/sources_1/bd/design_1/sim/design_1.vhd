@@ -1,7 +1,7 @@
 --Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
---Date        : Tue Dec 14 16:10:38 2021
+--Date        : Wed Dec 15 13:28:16 2021
 --Host        : Daniel-laptop running 64-bit Ubuntu 20.04.3 LTS
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -77,19 +77,13 @@ entity design_1 is
     motor : out STD_LOGIC;
     rst : in STD_LOGIC
   );
-  attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=7,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=1,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=5,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
-  attribute HW_HANDOFF : string;
-  attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
+  attribute core_generation_info : string;
+  attribute core_generation_info of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=7,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=1,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=5,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
+  attribute hw_handoff : string;
+  attribute hw_handoff of design_1 : entity is "design_1.hwdef";
 end design_1;
 
 architecture STRUCTURE of design_1 is
-  component design_1_LUT_0_0 is
-  port (
-    percent : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    bits : out STD_LOGIC_VECTOR ( 26 downto 0 )
-  );
-  end component design_1_LUT_0_0;
   component design_1_clk_divider_0_1 is
   port (
     clk : in STD_LOGIC;
@@ -97,6 +91,11 @@ architecture STRUCTURE of design_1 is
     clk_div : out STD_LOGIC
   );
   end component design_1_clk_divider_0_1;
+  component design_1_xlconstant_0_0 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 15 downto 0 )
+  );
+  end component design_1_xlconstant_0_0;
   component design_1_Gripper_ctrl_0_0 is
   port (
     grip_close : in STD_LOGIC;
@@ -106,11 +105,12 @@ architecture STRUCTURE of design_1 is
     btn : in STD_LOGIC
   );
   end component design_1_Gripper_ctrl_0_0;
-  component design_1_xlconstant_0_0 is
+  component design_1_LUT_0_0 is
   port (
-    dout : out STD_LOGIC_VECTOR ( 15 downto 0 )
+    percent : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    bits : out STD_LOGIC_VECTOR ( 26 downto 0 )
   );
-  end component design_1_xlconstant_0_0;
+  end component design_1_LUT_0_0;
   signal Comp_27_0_z : STD_LOGIC;
   signal Gripper_ctrl_0_percent : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal LUT_0_bits : STD_LOGIC_VECTOR ( 26 downto 0 );
@@ -121,12 +121,12 @@ architecture STRUCTURE of design_1 is
   signal grip_close_0_1 : STD_LOGIC;
   signal rst_0_1 : STD_LOGIC;
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 15 downto 0 );
-  attribute X_INTERFACE_INFO : string;
-  attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 CLK.CLK CLK";
-  attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME CLK.CLK, ASSOCIATED_RESET rst, CLK_DOMAIN design_1_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of rst : signal is "xilinx.com:signal:reset:1.0 RST.RST RST";
-  attribute X_INTERFACE_PARAMETER of rst : signal is "XIL_INTERFACENAME RST.RST, INSERT_VIP 0, POLARITY ACTIVE_LOW";
+  attribute x_interface_info : string;
+  attribute x_interface_info of clk : signal is "xilinx.com:signal:clock:1.0 CLK.CLK CLK";
+  attribute x_interface_parameter : string;
+  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME CLK.CLK, ASSOCIATED_RESET rst, CLK_DOMAIN design_1_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of rst : signal is "xilinx.com:signal:reset:1.0 RST.RST RST";
+  attribute x_interface_parameter of rst : signal is "XIL_INTERFACENAME RST.RST, INSERT_VIP 0, POLARITY ACTIVE_LOW";
 begin
   LED <= Comp_27_0_z;
   btn_0_1 <= btn1;

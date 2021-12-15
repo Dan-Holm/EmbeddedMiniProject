@@ -2,8 +2,8 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Tue Dec 14 16:14:18 2021
-# Process ID: 44731
+# Start of session at: Wed Dec 15 13:29:09 2021
+# Process ID: 10164
 # Current directory: /home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/synth_1
 # Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: /home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/synth_1/design_1_wrapper.vds
@@ -13,7 +13,7 @@ source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2021.1/data/ip'.
-add_files: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2567.926 ; gain = 96.047 ; free physical = 1630 ; free virtual = 4872
+add_files: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2565.930 ; gain = 96.047 ; free physical = 924 ; free virtual = 2757
 Command: synth_design -top design_1_wrapper -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
@@ -21,25 +21,25 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 44822
+INFO: [Synth 8-7075] Helper process launched with PID 10241
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 1038 ; free virtual = 4286
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 314 ; free virtual = 2186
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:26]
 INFO: [Synth 8-3491] module 'design_1' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/synth/design_1.vhd:70' bound to instance 'design_1_i' of component 'design_1' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:39]
 INFO: [Synth 8-638] synthesizing module 'design_1' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/synth/design_1.vhd:86]
-INFO: [Synth 8-3491] module 'design_1_Gripper_ctrl_0_0' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/synth_1/.Xil/Vivado-44731-Daniel-laptop/realtime/design_1_Gripper_ctrl_0_0_stub.vhdl:5' bound to instance 'Gripper_ctrl_0' of component 'design_1_Gripper_ctrl_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/synth/design_1.vhd:138]
-INFO: [Synth 8-638] synthesizing module 'design_1_Gripper_ctrl_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/synth_1/.Xil/Vivado-44731-Daniel-laptop/realtime/design_1_Gripper_ctrl_0_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'design_1_LUT_0_0' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/synth_1/.Xil/Vivado-44731-Daniel-laptop/realtime/design_1_LUT_0_0_stub.vhdl:5' bound to instance 'LUT_0' of component 'design_1_LUT_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/synth/design_1.vhd:146]
-INFO: [Synth 8-638] synthesizing module 'design_1_LUT_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/synth_1/.Xil/Vivado-44731-Daniel-laptop/realtime/design_1_LUT_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'design_1_Gripper_ctrl_0_0' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/synth_1/.Xil/Vivado-10164-Daniel-laptop/realtime/design_1_Gripper_ctrl_0_0_stub.vhdl:5' bound to instance 'Gripper_ctrl_0' of component 'design_1_Gripper_ctrl_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/synth/design_1.vhd:138]
+INFO: [Synth 8-638] synthesizing module 'design_1_Gripper_ctrl_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/synth_1/.Xil/Vivado-10164-Daniel-laptop/realtime/design_1_Gripper_ctrl_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'design_1_LUT_0_0' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/synth_1/.Xil/Vivado-10164-Daniel-laptop/realtime/design_1_LUT_0_0_stub.vhdl:5' bound to instance 'LUT_0' of component 'design_1_LUT_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/synth/design_1.vhd:146]
+INFO: [Synth 8-638] synthesizing module 'design_1_LUT_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/synth_1/.Xil/Vivado-10164-Daniel-laptop/realtime/design_1_LUT_0_0_stub.vhdl:13]
 INFO: [Synth 8-638] synthesizing module 'PWM_imp_BGUKI' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/synth/design_1.vhd:24]
-INFO: [Synth 8-3491] module 'design_1_Comp_27_0_0' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/synth_1/.Xil/Vivado-44731-Daniel-laptop/realtime/design_1_Comp_27_0_0_stub.vhdl:5' bound to instance 'Comp_27_0' of component 'design_1_Comp_27_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/synth/design_1.vhd:52]
-INFO: [Synth 8-638] synthesizing module 'design_1_Comp_27_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/synth_1/.Xil/Vivado-44731-Daniel-laptop/realtime/design_1_Comp_27_0_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'design_1_Counter_27_0_0' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/synth_1/.Xil/Vivado-44731-Daniel-laptop/realtime/design_1_Counter_27_0_0_stub.vhdl:5' bound to instance 'Counter_27_0' of component 'design_1_Counter_27_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/synth/design_1.vhd:58]
-INFO: [Synth 8-638] synthesizing module 'design_1_Counter_27_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/synth_1/.Xil/Vivado-44731-Daniel-laptop/realtime/design_1_Counter_27_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_1_Comp_27_0_0' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/synth_1/.Xil/Vivado-10164-Daniel-laptop/realtime/design_1_Comp_27_0_0_stub.vhdl:5' bound to instance 'Comp_27_0' of component 'design_1_Comp_27_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/synth/design_1.vhd:52]
+INFO: [Synth 8-638] synthesizing module 'design_1_Comp_27_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/synth_1/.Xil/Vivado-10164-Daniel-laptop/realtime/design_1_Comp_27_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'design_1_Counter_27_0_0' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/synth_1/.Xil/Vivado-10164-Daniel-laptop/realtime/design_1_Counter_27_0_0_stub.vhdl:5' bound to instance 'Counter_27_0' of component 'design_1_Counter_27_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/synth/design_1.vhd:58]
+INFO: [Synth 8-638] synthesizing module 'design_1_Counter_27_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/synth_1/.Xil/Vivado-10164-Daniel-laptop/realtime/design_1_Counter_27_0_0_stub.vhdl:15]
 INFO: [Synth 8-256] done synthesizing module 'PWM_imp_BGUKI' (1#1) [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/synth/design_1.vhd:24]
-INFO: [Synth 8-3491] module 'design_1_clk_divider_0_1' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/synth_1/.Xil/Vivado-44731-Daniel-laptop/realtime/design_1_clk_divider_0_1_stub.vhdl:5' bound to instance 'clk_divider_0' of component 'design_1_clk_divider_0_1' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/synth/design_1.vhd:159]
-INFO: [Synth 8-638] synthesizing module 'design_1_clk_divider_0_1' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/synth_1/.Xil/Vivado-44731-Daniel-laptop/realtime/design_1_clk_divider_0_1_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'design_1_clk_divider_0_1' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/synth_1/.Xil/Vivado-10164-Daniel-laptop/realtime/design_1_clk_divider_0_1_stub.vhdl:5' bound to instance 'clk_divider_0' of component 'design_1_clk_divider_0_1' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/synth/design_1.vhd:159]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_divider_0_1' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/synth_1/.Xil/Vivado-10164-Daniel-laptop/realtime/design_1_clk_divider_0_1_stub.vhdl:14]
 INFO: [Synth 8-3491] module 'design_1_xlconstant_0_0' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57' bound to instance 'xlconstant_0' of component 'design_1_xlconstant_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/synth/design_1.vhd:165]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
@@ -48,18 +48,18 @@ INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_0_0' (3#1) [/
 INFO: [Synth 8-256] done synthesizing module 'design_1' (4#1) [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/synth/design_1.vhd:86]
 INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (5#1) [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:26]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 240 ; free virtual = 3477
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 171 ; free virtual = 1359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 232 ; free virtual = 3469
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 162 ; free virtual = 1353
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 232 ; free virtual = 3469
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 162 ; free virtual = 1353
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 225 ; free virtual = 3461
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 153 ; free virtual = 1347
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -68,12 +68,12 @@ Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject
 Finished Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/ip/design_1_Comp_27_0_0_1/design_1_Comp_27_0_0/design_1_Comp_27_0_0_in_context.xdc] for cell 'design_1_i/PWM/Comp_27_0'
 Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/ip/design_1_Counter_27_0_0_1/design_1_Counter_27_0_0/design_1_Counter_27_0_0_in_context.xdc] for cell 'design_1_i/PWM/Counter_27_0'
 Finished Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/ip/design_1_Counter_27_0_0_1/design_1_Counter_27_0_0/design_1_Counter_27_0_0_in_context.xdc] for cell 'design_1_i/PWM/Counter_27_0'
-Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/ip/design_1_LUT_0_0/design_1_LUT_0_0/design_1_LUT_0_0_in_context.xdc] for cell 'design_1_i/LUT_0'
-Finished Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/ip/design_1_LUT_0_0/design_1_LUT_0_0/design_1_LUT_0_0_in_context.xdc] for cell 'design_1_i/LUT_0'
 Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/ip/design_1_clk_divider_0_1/design_1_clk_divider_0_1/design_1_clk_divider_0_1_in_context.xdc] for cell 'design_1_i/clk_divider_0'
 Finished Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/ip/design_1_clk_divider_0_1/design_1_clk_divider_0_1/design_1_clk_divider_0_1_in_context.xdc] for cell 'design_1_i/clk_divider_0'
 Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/ip/design_1_Gripper_ctrl_0_0/design_1_Gripper_ctrl_0_0/design_1_Gripper_ctrl_0_0_in_context.xdc] for cell 'design_1_i/Gripper_ctrl_0'
 Finished Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/ip/design_1_Gripper_ctrl_0_0/design_1_Gripper_ctrl_0_0/design_1_Gripper_ctrl_0_0_in_context.xdc] for cell 'design_1_i/Gripper_ctrl_0'
+Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/ip/design_1_LUT_0_0/design_1_LUT_0_0/design_1_LUT_0_0_in_context.xdc] for cell 'design_1_i/LUT_0'
+Finished Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/ip/design_1_LUT_0_0/design_1_LUT_0_0/design_1_LUT_0_0_in_context.xdc] for cell 'design_1_i/LUT_0'
 Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.srcs/constrs_1/imports/Lecture3/PYNQ-Z2 v1.0.xdc]
 Finished Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.srcs/constrs_1/imports/Lecture3/PYNQ-Z2 v1.0.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.srcs/constrs_1/imports/Lecture3/PYNQ-Z2 v1.0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
@@ -82,20 +82,20 @@ Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject
 Finished Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 976 ; free virtual = 4217
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 847 ; free virtual = 2102
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 976 ; free virtual = 4217
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 847 ; free virtual = 2102
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 1046 ; free virtual = 4287
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 912 ; free virtual = 2171
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 1046 ; free virtual = 4287
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 912 ; free virtual = 2171
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -103,15 +103,15 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/PWM/Comp_27_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/PWM/Counter_27_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/LUT_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/clk_divider_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/Gripper_ctrl_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlconstant_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/Gripper_ctrl_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/LUT_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 1046 ; free virtual = 4288
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 912 ; free virtual = 2171
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 1045 ; free virtual = 4287
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 910 ; free virtual = 2170
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -133,25 +133,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 1042 ; free virtual = 4286
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 902 ; free virtual = 2171
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 919 ; free virtual = 4164
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 769 ; free virtual = 2047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 919 ; free virtual = 4164
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 769 ; free virtual = 2047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 918 ; free virtual = 4162
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 767 ; free virtual = 2046
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -169,37 +169,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 918 ; free virtual = 4163
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 766 ; free virtual = 2045
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 918 ; free virtual = 4163
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 766 ; free virtual = 2045
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 918 ; free virtual = 4163
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 766 ; free virtual = 2045
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 918 ; free virtual = 4163
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 766 ; free virtual = 2045
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 918 ; free virtual = 4163
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 766 ; free virtual = 2045
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 918 ; free virtual = 4163
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 766 ; free virtual = 2045
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -229,16 +229,16 @@ Report Cell Usage:
 |7     |OBUF                           |     2|
 +------+-------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 918 ; free virtual = 4163
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 766 ; free virtual = 2045
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 975 ; free virtual = 4220
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 975 ; free virtual = 4220
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 823 ; free virtual = 2102
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 823 ; free virtual = 2102
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 970 ; free virtual = 4215
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 813 ; free virtual = 2096
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 999 ; free virtual = 4244
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 838 ; free virtual = 2125
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -246,7 +246,7 @@ Synth Design complete, checksum: 7fda19c6
 INFO: [Common 17-83] Releasing license: Synthesis
 38 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 2567.926 ; gain = 0.000 ; free physical = 1142 ; free virtual = 4387
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2565.930 ; gain = 0.000 ; free physical = 981 ; free virtual = 2268
 INFO: [Common 17-1381] The checkpoint '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Dec 14 16:14:54 2021...
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 15 13:29:47 2021...

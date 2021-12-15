@@ -56,7 +56,7 @@ USE ieee.numeric_std.ALL;
 ENTITY design_top_Addr_ctrl_0_0 IS
   PORT (
     clk : IN STD_LOGIC;
-    addr : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    addr : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
     dout : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
   );
 END design_top_Addr_ctrl_0_0;
@@ -67,7 +67,7 @@ ARCHITECTURE design_top_Addr_ctrl_0_0_arch OF design_top_Addr_ctrl_0_0 IS
   COMPONENT Addr_ctrl IS
     PORT (
       clk : IN STD_LOGIC;
-      addr : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+      addr : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
       dout : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
     );
   END COMPONENT Addr_ctrl;
@@ -75,7 +75,7 @@ ARCHITECTURE design_top_Addr_ctrl_0_0_arch OF design_top_Addr_ctrl_0_0 IS
   ATTRIBUTE IP_DEFINITION_SOURCE OF design_top_Addr_ctrl_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clk CLK";
 BEGIN
   U0 : Addr_ctrl

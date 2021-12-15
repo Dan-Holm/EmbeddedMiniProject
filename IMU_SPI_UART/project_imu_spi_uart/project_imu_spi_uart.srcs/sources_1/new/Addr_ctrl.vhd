@@ -34,14 +34,14 @@ use ieee.std_logic_arith.all;
 
 entity Addr_ctrl is
     Port ( clk  : in STD_LOGIC;
-           addr : in std_logic_vector(3 downto 0);
+           addr : in std_logic_vector(4 downto 0);
            dout : out std_logic_vector(7 downto 0));
 end Addr_ctrl;
 
 architecture Behavioral of Addr_ctrl is
-type rom_type is array (0 to 15) of std_logic_vector(7 downto 0);
+type rom_type is array (0 to 19) of std_logic_vector(7 downto 0);
 constant rom : rom_type:=(
-                    x"34",  --GYRO_XOUT_L
+                    x"34", --GYRO_XOUT_L
                     x"2D", --ACCEL_XOUT_H
                     x"2E", --ACCEL_XOUT_L
                     x"2F", --ACCEL_YOUT_H
@@ -52,10 +52,14 @@ constant rom : rom_type:=(
                     x"34", --GYRO_XOUT_L
                     x"35", --GYRO_YOUT_H
                     x"36", --GYRO_YOUT_L
-                    x"37", --GYRO_ZOUT_H
+                    x"37", --GYRO_ZOUT_H    
                     x"38", --GYRO_ZOUT_L
-                    x"39", --TEMP_OUT_H
-                    x"3A", --TEMP_OUT_L
+                    x"11", --MAG_XOUT_L
+                    x"12", --MAG_XOUT_H
+                    x"13", --MAG_YOUT_L
+                    x"14", --MAG_YOUT_H
+                    x"15", --MAG_ZOUT_L    
+                    x"16", --MAG_ZOUT_H
                     x"00"  --WHO AM I?
                           );
 BEGIN

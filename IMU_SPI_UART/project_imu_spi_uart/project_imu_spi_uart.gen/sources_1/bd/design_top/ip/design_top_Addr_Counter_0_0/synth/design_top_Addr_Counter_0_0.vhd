@@ -58,7 +58,7 @@ ENTITY design_top_Addr_Counter_0_0 IS
     clk : IN STD_LOGIC;
     rst : IN STD_LOGIC;
     en : IN STD_LOGIC;
-    addr : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+    addr : OUT STD_LOGIC_VECTOR(4 DOWNTO 0)
   );
 END design_top_Addr_Counter_0_0;
 
@@ -70,22 +70,22 @@ ARCHITECTURE design_top_Addr_Counter_0_0_arch OF design_top_Addr_Counter_0_0 IS
       clk : IN STD_LOGIC;
       rst : IN STD_LOGIC;
       en : IN STD_LOGIC;
-      addr : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+      addr : OUT STD_LOGIC_VECTOR(4 DOWNTO 0)
     );
   END COMPONENT Addr_Counter;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF design_top_Addr_Counter_0_0_arch: ARCHITECTURE IS "Addr_Counter,Vivado 2021.1.1";
+  ATTRIBUTE X_CORE_INFO OF design_top_Addr_Counter_0_0_arch: ARCHITECTURE IS "Addr_Counter,Vivado 2021.1";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_top_Addr_Counter_0_0_arch : ARCHITECTURE IS "design_top_Addr_Counter_0_0,Addr_Counter,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_top_Addr_Counter_0_0_arch: ARCHITECTURE IS "design_top_Addr_Counter_0_0,Addr_Counter,{x_ipProduct=Vivado 2021.1.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=Addr_Counter,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED}";
+  ATTRIBUTE CORE_GENERATION_INFO OF design_top_Addr_Counter_0_0_arch: ARCHITECTURE IS "design_top_Addr_Counter_0_0,Addr_Counter,{x_ipProduct=Vivado 2021.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=Addr_Counter,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF design_top_Addr_Counter_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER OF rst: SIGNAL IS "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF rst: SIGNAL IS "xilinx.com:signal:reset:1.0 rst RST";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clk CLK";
 BEGIN
   U0 : Addr_Counter

@@ -1,10 +1,10 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
--- Date        : Tue Dec 14 15:56:17 2021
+-- Date        : Wed Dec 15 13:21:01 2021
 -- Host        : Daniel-laptop running 64-bit Ubuntu 20.04.3 LTS
--- Command     : write_vhdl -force -mode funcsim -rename_top design_1_Gripper_ctrl_0_0 -prefix
---               design_1_Gripper_ctrl_0_0_ design_1_Gripper_ctrl_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/UART_Gripper/UART_Gripper.gen/sources_1/bd/design_1/ip/design_1_Gripper_ctrl_0_0/design_1_Gripper_ctrl_0_0_sim_netlist.vhdl
 -- Design      : design_1_Gripper_ctrl_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -22,6 +22,8 @@ entity design_1_Gripper_ctrl_0_0_Gripper_ctrl is
     mag_data : in STD_LOGIC_VECTOR ( 15 downto 0 );
     grip_close : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_Gripper_ctrl_0_0_Gripper_ctrl : entity is "Gripper_ctrl";
 end design_1_Gripper_ctrl_0_0_Gripper_ctrl;
 
 architecture STRUCTURE of design_1_Gripper_ctrl_0_0_Gripper_ctrl is
@@ -42,15 +44,15 @@ architecture STRUCTURE of design_1_Gripper_ctrl_0_0_Gripper_ctrl is
   signal count_reg : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal p_0_in : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \^percent\ : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal \percent[3]_i_1_n_0\ : STD_LOGIC;
+  signal \percent[2]_i_1_n_0\ : STD_LOGIC;
   signal state : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \state__0\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_sequential_state[0]_i_2\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \FSM_sequential_state[0]_i_3\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \FSM_sequential_state[1]_i_2\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \FSM_sequential_state[2]_i_2\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \FSM_sequential_state[2]_i_6\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \FSM_sequential_state[0]_i_2\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \FSM_sequential_state[0]_i_3\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \FSM_sequential_state[1]_i_2\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \FSM_sequential_state[2]_i_2\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \FSM_sequential_state[2]_i_3\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \FSM_sequential_state[2]_i_7\ : label is "soft_lutpair0";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_sequential_state_reg[0]\ : label is "iSTATE:011,iSTATE0:100,iSTATE1:010,iSTATE2:001,iSTATE3:000,iSTATE4:101";
@@ -59,7 +61,7 @@ architecture STRUCTURE of design_1_Gripper_ctrl_0_0_Gripper_ctrl is
   attribute SOFT_HLUTNM of \count[1]_i_1\ : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of \count[2]_i_1\ : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of \count[3]_i_3\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \percent[3]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \percent[2]_i_1\ : label is "soft_lutpair3";
 begin
   percent(0) <= \^percent\(0);
 \FSM_sequential_state[0]_i_1\: unisim.vcomponents.LUT6
@@ -159,14 +161,14 @@ begin
     );
 \FSM_sequential_state[2]_i_3\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFF3332"
+      INIT => X"FFAEAEAE"
     )
         port map (
-      I0 => mag_data(15),
-      I1 => state(0),
-      I2 => mag_data(13),
-      I3 => mag_data(14),
-      I4 => \FSM_sequential_state[2]_i_6_n_0\,
+      I0 => \FSM_sequential_state[2]_i_6_n_0\,
+      I1 => mag_data(15),
+      I2 => state(0),
+      I3 => state(1),
+      I4 => state(2),
       O => \FSM_sequential_state[2]_i_3_n_0\
     );
 \FSM_sequential_state[2]_i_4\: unisim.vcomponents.LUT6
@@ -191,15 +193,17 @@ begin
       I1 => btn,
       O => \FSM_sequential_state[2]_i_5_n_0\
     );
-\FSM_sequential_state[2]_i_6\: unisim.vcomponents.LUT4
+\FSM_sequential_state[2]_i_6\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"BB3E"
+      INIT => X"000FFFFF000FFFFE"
     )
         port map (
-      I0 => state(2),
-      I1 => state(0),
-      I2 => grip_close,
-      I3 => state(1),
+      I0 => mag_data(14),
+      I1 => mag_data(13),
+      I2 => state(1),
+      I3 => grip_close,
+      I4 => state(0),
+      I5 => state(2),
       O => \FSM_sequential_state[2]_i_6_n_0\
     );
 \FSM_sequential_state[2]_i_7\: unisim.vcomponents.LUT5
@@ -207,8 +211,8 @@ begin
       INIT => X"80000000"
     )
         port map (
-      I0 => state(1),
-      I1 => count_reg(3),
+      I0 => count_reg(3),
+      I1 => state(1),
       I2 => count_reg(2),
       I3 => count_reg(0),
       I4 => count_reg(1),
@@ -371,22 +375,22 @@ begin
       Q => count_reg(3),
       R => count0
     );
-\percent[3]_i_1\: unisim.vcomponents.LUT4
+\percent[2]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"8BB8"
+      INIT => X"B88B"
     )
         port map (
       I0 => \^percent\(0),
       I1 => state(2),
       I2 => state(0),
       I3 => state(1),
-      O => \percent[3]_i_1_n_0\
+      O => \percent[2]_i_1_n_0\
     );
-\percent_reg[3]\: unisim.vcomponents.FDRE
+\percent_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      D => \percent[3]_i_1_n_0\,
+      D => \percent[2]_i_1_n_0\,
       Q => \^percent\(0),
       R => '0'
     );
@@ -416,22 +420,27 @@ entity design_1_Gripper_ctrl_0_0 is
 end design_1_Gripper_ctrl_0_0;
 
 architecture STRUCTURE of design_1_Gripper_ctrl_0_0 is
-  signal \^percent\ : STD_LOGIC_VECTOR ( 2 to 2 );
+  signal \<const1>\ : STD_LOGIC;
+  signal \^percent\ : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute x_interface_info : string;
   attribute x_interface_info of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute x_interface_parameter : string;
   attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0";
 begin
-  percent(3) <= \^percent\(2);
-  percent(2) <= \^percent\(2);
-  percent(1) <= \^percent\(2);
-  percent(0) <= \^percent\(2);
+  percent(3) <= \<const1>\;
+  percent(2) <= \^percent\(0);
+  percent(1) <= \<const1>\;
+  percent(0) <= \^percent\(0);
 U0: entity work.design_1_Gripper_ctrl_0_0_Gripper_ctrl
      port map (
       btn => btn,
       clk => clk,
       grip_close => grip_close,
       mag_data(15 downto 0) => mag_data(15 downto 0),
-      percent(0) => \^percent\(2)
+      percent(0) => \^percent\(0)
+    );
+VCC: unisim.vcomponents.VCC
+     port map (
+      P => \<const1>\
     );
 end STRUCTURE;

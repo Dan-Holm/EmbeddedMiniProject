@@ -7,21 +7,21 @@
       "name": "design_top",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2021.1.1",
+      "tool_version": "2021.1",
       "validated": "true"
     },
     "design_tree": {
-      "IMU_CTRL": "",
       "Address_handler": {
-        "Addr_Counter_0": "",
         "fsm_intr_0": "",
+        "Addr_Counter_0": "",
         "Addr_ctrl_0": ""
       },
       "UART_TX": {
         "tx_mod_0": "",
         "clk_divider_UART_0": ""
       },
-      "clk_divider": ""
+      "clk_divider": "",
+      "IMU_CTRL": ""
     },
     "ports": {
       "clk": {
@@ -96,61 +96,6 @@
       }
     },
     "components": {
-      "IMU_CTRL": {
-        "vlnv": "xilinx.com:module_ref:CTRL:1.0",
-        "xci_name": "design_top_CTRL_0_0",
-        "xci_path": "ip/design_top_CTRL_0_0/design_top_CTRL_0_0.xci",
-        "inst_hier_path": "IMU_CTRL",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "CTRL",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              }
-            }
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "en": {
-            "direction": "I"
-          },
-          "addr1": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "data1": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
-          },
-          "data_ready": {
-            "direction": "O"
-          },
-          "cs": {
-            "direction": "O"
-          },
-          "SCLK": {
-            "direction": "O"
-          },
-          "MOSI": {
-            "direction": "O"
-          },
-          "MISO": {
-            "direction": "I"
-          }
-        }
-      },
       "Address_handler": {
         "ports": {
           "clk": {
@@ -171,51 +116,6 @@
           }
         },
         "components": {
-          "Addr_Counter_0": {
-            "vlnv": "xilinx.com:module_ref:Addr_Counter:1.0",
-            "xci_name": "design_top_Addr_Counter_0_0",
-            "xci_path": "ip/design_top_Addr_Counter_0_0/design_top_Addr_Counter_0_0.xci",
-            "inst_hier_path": "Address_handler/Addr_Counter_0",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "Addr_Counter",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "clk": {
-                "type": "clk",
-                "direction": "I",
-                "parameters": {
-                  "ASSOCIATED_RESET": {
-                    "value": "rst",
-                    "value_src": "constant"
-                  }
-                }
-              },
-              "rst": {
-                "type": "rst",
-                "direction": "I"
-              },
-              "en": {
-                "direction": "I",
-                "parameters": {
-                  "PortWidth": {
-                    "value": "1",
-                    "value_src": "default_prop"
-                  },
-                  "SENSITIVITY": {
-                    "value": "LEVEL_HIGH",
-                    "value_src": "const_prop"
-                  }
-                }
-              },
-              "addr": {
-                "direction": "O",
-                "left": "3",
-                "right": "0"
-              }
-            }
-          },
           "fsm_intr_0": {
             "vlnv": "xilinx.com:module_ref:fsm_intr:1.0",
             "xci_name": "design_top_fsm_intr_0_0",
@@ -260,6 +160,51 @@
               }
             }
           },
+          "Addr_Counter_0": {
+            "vlnv": "xilinx.com:module_ref:Addr_Counter:1.0",
+            "xci_name": "design_top_Addr_Counter_0_0",
+            "xci_path": "ip/design_top_Addr_Counter_0_0/design_top_Addr_Counter_0_0.xci",
+            "inst_hier_path": "Address_handler/Addr_Counter_0",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "Addr_Counter",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "clk": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_RESET": {
+                    "value": "rst",
+                    "value_src": "constant"
+                  }
+                }
+              },
+              "rst": {
+                "type": "rst",
+                "direction": "I"
+              },
+              "en": {
+                "direction": "I",
+                "parameters": {
+                  "SENSITIVITY": {
+                    "value": "LEVEL_HIGH",
+                    "value_src": "const_prop"
+                  },
+                  "PortWidth": {
+                    "value": "1",
+                    "value_src": "default_prop"
+                  }
+                }
+              },
+              "addr": {
+                "direction": "O",
+                "left": "4",
+                "right": "0"
+              }
+            }
+          },
           "Addr_ctrl_0": {
             "vlnv": "xilinx.com:module_ref:Addr_ctrl:1.0",
             "xci_name": "design_top_Addr_ctrl_0_0",
@@ -277,7 +222,7 @@
               },
               "addr": {
                 "direction": "I",
-                "left": "3",
+                "left": "4",
                 "right": "0"
               },
               "dout": {
@@ -304,8 +249,8 @@
           "clk_divider_0_clk_div": {
             "ports": [
               "clk",
-              "Addr_Counter_0/clk",
               "fsm_intr_0/clk",
+              "Addr_Counter_0/clk",
               "Addr_ctrl_0/clk"
             ]
           },
@@ -495,12 +440,68 @@
             "direction": "O"
           }
         }
+      },
+      "IMU_CTRL": {
+        "vlnv": "xilinx.com:module_ref:CTRL:1.0",
+        "xci_name": "design_top_CTRL_0_0",
+        "xci_path": "ip/design_top_CTRL_0_0/design_top_CTRL_0_0.xci",
+        "inst_hier_path": "IMU_CTRL",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "CTRL",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "en": {
+            "direction": "I"
+          },
+          "addr1": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "data1": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "data_ready": {
+            "direction": "O"
+          },
+          "cs": {
+            "direction": "O"
+          },
+          "SCLK": {
+            "direction": "O"
+          },
+          "MOSI": {
+            "direction": "O"
+          },
+          "MISO": {
+            "direction": "I"
+          }
+        }
       }
     },
     "nets": {
-      "Addr_ctrl_0_dout": {
+      "Address_handler_dout": {
         "ports": [
           "Address_handler/dout",
+          "LEDs",
           "IMU_CTRL/addr1"
         ]
       },
@@ -522,10 +523,9 @@
           "SCLK"
         ]
       },
-      "CTRL_0_data1": {
+      "IMU_CTRL_data1": {
         "ports": [
           "IMU_CTRL/data1",
-          "LEDs",
           "UART_TX/data1"
         ]
       },
@@ -560,8 +560,8 @@
           "rst",
           "Address_handler/rst",
           "UART_TX/rst",
-          "IMU_CTRL/rst",
-          "clk_divider/rst"
+          "clk_divider/rst",
+          "IMU_CTRL/rst"
         ]
       },
       "shift_load_1": {

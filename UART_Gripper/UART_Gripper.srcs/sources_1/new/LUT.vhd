@@ -52,7 +52,7 @@ begin
                 when "0111" => bits <= std_logic_vector(to_unsigned(1750000, 27));
                 when "1000" => bits <= std_logic_vector(to_unsigned(2000000, 27));
                 when "1001" => bits <= std_logic_vector(to_unsigned(2250000, 27));
-                when "1010" => bits <= std_logic_vector(to_unsigned(68000, 27));--A 0 degree 544uS
+                when "1010" => bits <= std_logic_vector(to_unsigned(50000, 27));--A 0 degree 544uS
                 when "1011" => bits <= std_logic_vector(to_unsigned(137500, 27));--B 10 degree
                 when "1100" => bits <= std_logic_vector(to_unsigned(150000, 27));--C 20
                 when "1101" => bits <= std_logic_vector(to_unsigned(156250, 27));--D 30

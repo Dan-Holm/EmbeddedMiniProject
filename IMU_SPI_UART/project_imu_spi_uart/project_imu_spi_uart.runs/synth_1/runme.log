@@ -12,7 +12,7 @@ source design_top_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2021.1/data/ip'.
-add_files: Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 2526.895 ; gain = 96.047 ; free physical = 638 ; free virtual = 1721
+add_files: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 2546.895 ; gain = 88.043 ; free physical = 740 ; free virtual = 2420
 Command: synth_design -top design_top_wrapper -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
@@ -20,56 +20,54 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 17524
+INFO: [Synth 8-7075] Helper process launched with PID 60546
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 137 ; free virtual = 1179
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 144 ; free virtual = 1870
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_top_wrapper' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/hdl/design_top_wrapper.vhd:29]
 INFO: [Synth 8-3491] module 'design_top' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/synth/design_top.vhd:144' bound to instance 'design_top_i' of component 'design_top' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/hdl/design_top_wrapper.vhd:45]
 INFO: [Synth 8-638] synthesizing module 'design_top' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/synth/design_top.vhd:163]
 INFO: [Synth 8-638] synthesizing module 'Address_handler_imp_1YP68T6' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/synth/design_top.vhd:23]
-INFO: [Synth 8-3491] module 'design_top_Addr_Counter_0_0' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-17395-Daniel-laptop/realtime/design_top_Addr_Counter_0_0_stub.vhdl:5' bound to instance 'Addr_Counter_0' of component 'design_top_Addr_Counter_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/synth/design_top.vhd:58]
-INFO: [Synth 8-638] synthesizing module 'design_top_Addr_Counter_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-17395-Daniel-laptop/realtime/design_top_Addr_Counter_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'design_top_Addr_ctrl_0_0' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-17395-Daniel-laptop/realtime/design_top_Addr_ctrl_0_0_stub.vhdl:5' bound to instance 'Addr_ctrl_0' of component 'design_top_Addr_ctrl_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/synth/design_top.vhd:65]
-INFO: [Synth 8-638] synthesizing module 'design_top_Addr_ctrl_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-17395-Daniel-laptop/realtime/design_top_Addr_ctrl_0_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'design_top_fsm_intr_0_0' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-17395-Daniel-laptop/realtime/design_top_fsm_intr_0_0_stub.vhdl:5' bound to instance 'fsm_intr_0' of component 'design_top_fsm_intr_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/synth/design_top.vhd:71]
-INFO: [Synth 8-638] synthesizing module 'design_top_fsm_intr_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-17395-Daniel-laptop/realtime/design_top_fsm_intr_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_top_Addr_Counter_0_0' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-60471-Daniel-laptop/realtime/design_top_Addr_Counter_0_0_stub.vhdl:5' bound to instance 'Addr_Counter_0' of component 'design_top_Addr_Counter_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/synth/design_top.vhd:58]
+INFO: [Synth 8-638] synthesizing module 'design_top_Addr_Counter_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-60471-Daniel-laptop/realtime/design_top_Addr_Counter_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_top_Addr_ctrl_0_0' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-60471-Daniel-laptop/realtime/design_top_Addr_ctrl_0_0_stub.vhdl:5' bound to instance 'Addr_ctrl_0' of component 'design_top_Addr_ctrl_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/synth/design_top.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'design_top_Addr_ctrl_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-60471-Daniel-laptop/realtime/design_top_Addr_ctrl_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'design_top_fsm_intr_0_0' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-60471-Daniel-laptop/realtime/design_top_fsm_intr_0_0_stub.vhdl:5' bound to instance 'fsm_intr_0' of component 'design_top_fsm_intr_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/synth/design_top.vhd:71]
+INFO: [Synth 8-638] synthesizing module 'design_top_fsm_intr_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-60471-Daniel-laptop/realtime/design_top_fsm_intr_0_0_stub.vhdl:15]
 INFO: [Synth 8-256] done synthesizing module 'Address_handler_imp_1YP68T6' (1#1) [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/synth/design_top.vhd:23]
-INFO: [Synth 8-3491] module 'design_top_CTRL_0_0' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-17395-Daniel-laptop/realtime/design_top_CTRL_0_0_stub.vhdl:5' bound to instance 'IMU_CTRL' of component 'design_top_CTRL_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/synth/design_top.vhd:222]
-INFO: [Synth 8-638] synthesizing module 'design_top_CTRL_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-17395-Daniel-laptop/realtime/design_top_CTRL_0_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_top_CTRL_0_0' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-60471-Daniel-laptop/realtime/design_top_CTRL_0_0_stub.vhdl:5' bound to instance 'IMU_CTRL' of component 'design_top_CTRL_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/synth/design_top.vhd:222]
+INFO: [Synth 8-638] synthesizing module 'design_top_CTRL_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-60471-Daniel-laptop/realtime/design_top_CTRL_0_0_stub.vhdl:21]
 INFO: [Synth 8-638] synthesizing module 'UART_TX_imp_12I32OE' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/synth/design_top.vhd:93]
-INFO: [Synth 8-3491] module 'design_top_clk_divider_UART_0_0' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-17395-Daniel-laptop/realtime/design_top_clk_divider_UART_0_0_stub.vhdl:5' bound to instance 'clk_divider_UART_0' of component 'design_top_clk_divider_UART_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/synth/design_top.vhd:124]
-INFO: [Synth 8-638] synthesizing module 'design_top_clk_divider_UART_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-17395-Daniel-laptop/realtime/design_top_clk_divider_UART_0_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'design_top_tx_mod_0_0' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-17395-Daniel-laptop/realtime/design_top_tx_mod_0_0_stub.vhdl:5' bound to instance 'tx_mod_0' of component 'design_top_tx_mod_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/synth/design_top.vhd:130]
-INFO: [Synth 8-638] synthesizing module 'design_top_tx_mod_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-17395-Daniel-laptop/realtime/design_top_tx_mod_0_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'design_top_clk_divider_UART_0_0' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-60471-Daniel-laptop/realtime/design_top_clk_divider_UART_0_0_stub.vhdl:5' bound to instance 'clk_divider_UART_0' of component 'design_top_clk_divider_UART_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/synth/design_top.vhd:124]
+INFO: [Synth 8-638] synthesizing module 'design_top_clk_divider_UART_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-60471-Daniel-laptop/realtime/design_top_clk_divider_UART_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'design_top_tx_mod_0_0' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-60471-Daniel-laptop/realtime/design_top_tx_mod_0_0_stub.vhdl:5' bound to instance 'tx_mod_0' of component 'design_top_tx_mod_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/synth/design_top.vhd:130]
+INFO: [Synth 8-638] synthesizing module 'design_top_tx_mod_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-60471-Daniel-laptop/realtime/design_top_tx_mod_0_0_stub.vhdl:17]
 INFO: [Synth 8-256] done synthesizing module 'UART_TX_imp_12I32OE' (2#1) [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/synth/design_top.vhd:93]
-INFO: [Synth 8-3491] module 'design_top_clk_divider_0_0' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-17395-Daniel-laptop/realtime/design_top_clk_divider_0_0_stub.vhdl:5' bound to instance 'clk_divider' of component 'design_top_clk_divider_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/synth/design_top.vhd:243]
-INFO: [Synth 8-638] synthesizing module 'design_top_clk_divider_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-17395-Daniel-laptop/realtime/design_top_clk_divider_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'design_top_clk_divider_0_0' declared at '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-60471-Daniel-laptop/realtime/design_top_clk_divider_0_0_stub.vhdl:5' bound to instance 'clk_divider' of component 'design_top_clk_divider_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/synth/design_top.vhd:243]
+INFO: [Synth 8-638] synthesizing module 'design_top_clk_divider_0_0' [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/.Xil/Vivado-60471-Daniel-laptop/realtime/design_top_clk_divider_0_0_stub.vhdl:14]
 INFO: [Synth 8-256] done synthesizing module 'design_top' (3#1) [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/synth/design_top.vhd:163]
 INFO: [Synth 8-256] done synthesizing module 'design_top_wrapper' (4#1) [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/hdl/design_top_wrapper.vhd:29]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 130 ; free virtual = 551
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 137 ; free virtual = 1345
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 2390 ; free virtual = 3460
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 107 ; free virtual = 1046
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 2390 ; free virtual = 3460
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 106 ; free virtual = 1045
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 3211 ; free virtual = 4255
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 113 ; free virtual = 1010
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/ip/design_top_CTRL_0_0/design_top_CTRL_0_0/design_top_CTRL_0_0_in_context.xdc] for cell 'design_top_i/IMU_CTRL'
-Finished Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/ip/design_top_CTRL_0_0/design_top_CTRL_0_0/design_top_CTRL_0_0_in_context.xdc] for cell 'design_top_i/IMU_CTRL'
-Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/ip/design_top_Addr_Counter_0_0/design_top_Addr_Counter_0_0/design_top_Addr_Counter_0_0_in_context.xdc] for cell 'design_top_i/Address_handler/Addr_Counter_0'
-Finished Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/ip/design_top_Addr_Counter_0_0/design_top_Addr_Counter_0_0/design_top_Addr_Counter_0_0_in_context.xdc] for cell 'design_top_i/Address_handler/Addr_Counter_0'
 Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/ip/design_top_fsm_intr_0_0/design_top_fsm_intr_0_0/design_top_fsm_intr_0_0_in_context.xdc] for cell 'design_top_i/Address_handler/fsm_intr_0'
 Finished Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/ip/design_top_fsm_intr_0_0/design_top_fsm_intr_0_0/design_top_fsm_intr_0_0_in_context.xdc] for cell 'design_top_i/Address_handler/fsm_intr_0'
+Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/ip/design_top_Addr_Counter_0_0/design_top_Addr_Counter_0_0/design_top_Addr_Counter_0_0_in_context.xdc] for cell 'design_top_i/Address_handler/Addr_Counter_0'
+Finished Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/ip/design_top_Addr_Counter_0_0/design_top_Addr_Counter_0_0/design_top_Addr_Counter_0_0_in_context.xdc] for cell 'design_top_i/Address_handler/Addr_Counter_0'
 Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/ip/design_top_Addr_ctrl_0_0/design_top_Addr_ctrl_0_0/design_top_Addr_ctrl_0_0_in_context.xdc] for cell 'design_top_i/Address_handler/Addr_ctrl_0'
 Finished Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/ip/design_top_Addr_ctrl_0_0/design_top_Addr_ctrl_0_0/design_top_Addr_ctrl_0_0_in_context.xdc] for cell 'design_top_i/Address_handler/Addr_ctrl_0'
 Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/ip/design_top_tx_mod_0_0/design_top_tx_mod_0_0/design_top_tx_mod_0_0_in_context.xdc] for cell 'design_top_i/UART_TX/tx_mod_0'
@@ -78,6 +76,8 @@ Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject
 Finished Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/ip/design_top_clk_divider_UART_0_0/design_top_clk_divider_UART_0_0/design_top_clk_divider_UART_0_0_in_context.xdc] for cell 'design_top_i/UART_TX/clk_divider_UART_0'
 Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/ip/design_top_clk_divider_0_0/design_top_clk_divider_0_0/design_top_clk_divider_0_0_in_context.xdc] for cell 'design_top_i/clk_divider'
 Finished Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/ip/design_top_clk_divider_0_0/design_top_clk_divider_0_0/design_top_clk_divider_0_0_in_context.xdc] for cell 'design_top_i/clk_divider'
+Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/ip/design_top_CTRL_0_0/design_top_CTRL_0_0/design_top_CTRL_0_0_in_context.xdc] for cell 'design_top_i/IMU_CTRL'
+Finished Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.gen/sources_1/bd/design_top/ip/design_top_CTRL_0_0/design_top_CTRL_0_0/design_top_CTRL_0_0_in_context.xdc] for cell 'design_top_i/IMU_CTRL'
 Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.srcs/constrs_1/new/const1.xdc]
 Finished Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.srcs/constrs_1/new/const1.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.srcs/constrs_1/new/const1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_top_wrapper_propImpl.xdc].
@@ -86,37 +86,37 @@ Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject
 Finished Parsing XDC File [/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 4460 ; free virtual = 5712
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 771 ; free virtual = 1761
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 4459 ; free virtual = 5712
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 765 ; free virtual = 1758
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 4419 ; free virtual = 5775
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 827 ; free virtual = 1827
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 4419 ; free virtual = 5775
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 827 ; free virtual = 1827
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for design_top_i. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_top_i/IMU_CTRL. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_top_i/Address_handler/Addr_Counter_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_top_i/Address_handler/fsm_intr_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_top_i/Address_handler/Addr_Counter_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_top_i/Address_handler/Addr_ctrl_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_top_i/UART_TX/tx_mod_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_top_i/UART_TX/clk_divider_UART_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_top_i/clk_divider. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_top_i/IMU_CTRL. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 4418 ; free virtual = 5774
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 827 ; free virtual = 1827
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 4416 ; free virtual = 5775
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 825 ; free virtual = 1827
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -138,25 +138,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 4417 ; free virtual = 5775
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 780 ; free virtual = 1827
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 4276 ; free virtual = 5652
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 674 ; free virtual = 1704
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 4276 ; free virtual = 5652
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 674 ; free virtual = 1704
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 4274 ; free virtual = 5650
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 672 ; free virtual = 1702
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -174,37 +174,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 4273 ; free virtual = 5650
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 677 ; free virtual = 1703
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 4273 ; free virtual = 5650
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 677 ; free virtual = 1703
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 4273 ; free virtual = 5650
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 677 ; free virtual = 1703
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 4273 ; free virtual = 5650
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 677 ; free virtual = 1703
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 4273 ; free virtual = 5650
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 677 ; free virtual = 1703
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 4273 ; free virtual = 5650
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 677 ; free virtual = 1703
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -238,24 +238,24 @@ Report Cell Usage:
 |9     |OBUF                                 |    12|
 +------+-------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 4273 ; free virtual = 5650
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 677 ; free virtual = 1703
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 4331 ; free virtual = 5709
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 4330 ; free virtual = 5709
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 734 ; free virtual = 1760
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 734 ; free virtual = 1760
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 4297 ; free virtual = 5701
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 709 ; free virtual = 1752
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 4270 ; free virtual = 5732
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 709 ; free virtual = 1785
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 3f1a6923
+Synth Design complete, checksum: 8858af12
 INFO: [Common 17-83] Releasing license: Synthesis
 39 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:32 . Memory (MB): peak = 2526.895 ; gain = 0.000 ; free physical = 4409 ; free virtual = 5873
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:24 . Memory (MB): peak = 2546.895 ; gain = 0.000 ; free physical = 850 ; free virtual = 1927
 INFO: [Common 17-1381] The checkpoint '/home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.runs/synth_1/design_top_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_top_wrapper_utilization_synth.rpt -pb design_top_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Dec 14 13:57:22 2021...
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 15 16:02:49 2021...

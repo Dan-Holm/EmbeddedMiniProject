@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
-| Date         : Tue Dec 14 16:15:41 2021
+| Date         : Wed Dec 15 13:30:35 2021
 | Host         : Daniel-laptop running 64-bit Ubuntu 20.04.3 LTS
 | Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 | Design       : design_1_wrapper
@@ -69,7 +69,7 @@ Related violations: <none>
 
 TIMING-17#8 Critical Warning
 Non-clocked sequential cell  
-The clock pin design_1_i/Gripper_ctrl_0/U0/percent_reg[3]/C is not reached by a timing clock
+The clock pin design_1_i/Gripper_ctrl_0/U0/percent_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#9 Critical Warning
