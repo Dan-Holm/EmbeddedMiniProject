@@ -41,7 +41,6 @@ end Addr_ctrl;
 architecture Behavioral of Addr_ctrl is
 type rom_type is array (0 to 15) of std_logic_vector(7 downto 0);
 constant rom : rom_type:=(
-                    x"34",  --GYRO_XOUT_L
                     x"2D", --ACCEL_XOUT_H
                     x"2E", --ACCEL_XOUT_L
                     x"2F", --ACCEL_YOUT_H
@@ -50,6 +49,7 @@ constant rom : rom_type:=(
                     x"32", --ACCEL_ZOUT_L
                     x"33", --GYRO_XOUT_H
                     x"34", --GYRO_XOUT_L
+                    x"34",  --GYRO_XOUT_L
                     x"35", --GYRO_YOUT_H
                     x"36", --GYRO_YOUT_L
                     x"37", --GYRO_ZOUT_H

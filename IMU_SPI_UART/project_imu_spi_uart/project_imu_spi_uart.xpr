@@ -48,6 +48,7 @@
     <Option Name="SimulatorGccVersionRiviera" Val="6.2.0"/>
     <Option Name="SimulatorGccVersionActiveHdl" Val="6.2.0"/>
     <Option Name="TargetLanguage" Val="VHDL"/>
+    <Option Name="SimulatorLanguage" Val="VHDL"/>
     <Option Name="BoardPart" Val="tul.com.tw:pynq-z2:part0:1.0"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
@@ -62,20 +63,20 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="pynq-z2"/>
-    <Option Name="WTXSimLaunchSim" Val="5"/>
+    <Option Name="WTXSimLaunchSim" Val="13"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="1"/>
-    <Option Name="WTModelSimExportSim" Val="1"/>
-    <Option Name="WTQuestaExportSim" Val="1"/>
-    <Option Name="WTIesExportSim" Val="1"/>
-    <Option Name="WTVcsExportSim" Val="1"/>
-    <Option Name="WTRivieraExportSim" Val="1"/>
-    <Option Name="WTActivehdlExportSim" Val="1"/>
+    <Option Name="WTXSimExportSim" Val="2"/>
+    <Option Name="WTModelSimExportSim" Val="2"/>
+    <Option Name="WTQuestaExportSim" Val="2"/>
+    <Option Name="WTIesExportSim" Val="2"/>
+    <Option Name="WTVcsExportSim" Val="2"/>
+    <Option Name="WTRivieraExportSim" Val="2"/>
+    <Option Name="WTActivehdlExportSim" Val="2"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -92,18 +93,18 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/new/CTRL.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/miniProject/print_reg_new.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../MYSPI/MYSPI.srcs/sources_1/new/CTRL.vhd"/>
-          <Attr Name="ImportTime" Val="1606319852"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../print_reg_new.vhd"/>
+          <Attr Name="ImportTime" Val="1640883695"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/Addr_Counter.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/miniProject/print_data_registry_new.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../MYSPI/MYSPI.srcs/sources_1/new/Addr_Counter.vhd"/>
-          <Attr Name="ImportTime" Val="1605707856"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../print_data_registry_new.vhd"/>
+          <Attr Name="ImportTime" Val="1640883685"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -112,22 +113,6 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Users/esme/Desktop/fsm_intr_fsm.vhd"/>
           <Attr Name="ImportTime" Val="1570648829"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/Addr_ctrl.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../MYSPI/MYSPI.srcs/sources_1/new/Addr_ctrl.vhd"/>
-          <Attr Name="ImportTime" Val="1606404592"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/esme/OneDrive - Syddansk Universitet/Courses/Robot ELectronics E19/Lectures/Lecture 6/VHDL code/UART/tx_mod_fsm.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Users/esme/OneDrive - Syddansk Universitet/Courses/Robot ELectronics E19/Lectures/Lecture 6/VHDL code/UART/tx_mod_fsm.vhd"/>
-          <Attr Name="ImportTime" Val="1572258101"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -148,45 +133,140 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/LUT.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../UART_Gripper/UART_Gripper.srcs/sources_1/new/LUT.vhd"/>
+          <Attr Name="ImportTime" Val="1639584071"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/imports/new/Counter_27.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../UART_Gripper/UART_Gripper.srcs/sources_1/imports/new/Counter_27.vhd"/>
+          <Attr Name="ImportTime" Val="1639476333"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/imports/new/Comp_27.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../UART_Gripper/UART_Gripper.srcs/sources_1/imports/new/Comp_27.vhd"/>
+          <Attr Name="ImportTime" Val="1639476333"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/CTRL.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../MYSPI/MYSPI.srcs/sources_1/new/CTRL.vhd"/>
+          <Attr Name="ImportTime" Val="1606319852"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/Addr_ctrl.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../MYSPI/MYSPI.srcs/sources_1/new/Addr_ctrl.vhd"/>
+          <Attr Name="ImportTime" Val="1606404592"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/Addr_Counter.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../MYSPI/MYSPI.srcs/sources_1/new/Addr_Counter.vhd"/>
+          <Attr Name="ImportTime" Val="1605707856"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/esme/OneDrive - Syddansk Universitet/Courses/Robot ELectronics E19/Lectures/Lecture 6/VHDL code/UART/tx_mod_fsm.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Users/esme/OneDrive - Syddansk Universitet/Courses/Robot ELectronics E19/Lectures/Lecture 6/VHDL code/UART/tx_mod_fsm.vhd"/>
+          <Attr Name="ImportTime" Val="1572258101"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/Gripper_ctrl.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/design_2/design_2.bd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_Addr_ctrl_0_0_1/design_2_Addr_ctrl_0_0.xci">
+          <Proxy FileSetName="design_2_Addr_ctrl_0_0"/>
+        </CompFileExtendedInfo>
+      </File>
+      <File Path="$PGENDIR/sources_1/bd/design_2/hdl/design_2_wrapper.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/counter_27_m.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../UART_Gripper/UART_Gripper.srcs/sources_1/new/counter_27_m.vhd"/>
+          <Attr Name="ImportTime" Val="1639476333"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/bd/design_top/design_top.bd">
         <FileInfo>
+          <Attr Name="UserDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../MYSPI/MYSPI.srcs/sources_1/bd/design_top/design_top.bd"/>
           <Attr Name="ImportTime" Val="1635175028"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="design_top.bd" FileRelPathName="ip/design_top_Addr_Counter_0_0/design_top_Addr_Counter_0_0.xci">
-          <Proxy FileSetName="design_top_Addr_Counter_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_top.bd" FileRelPathName="ip/design_top_CTRL_0_0/design_top_CTRL_0_0.xci">
-          <Proxy FileSetName="design_top_CTRL_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_top.bd" FileRelPathName="ip/design_top_fsm_intr_0_0/design_top_fsm_intr_0_0.xci">
-          <Proxy FileSetName="design_top_fsm_intr_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_top.bd" FileRelPathName="ip/design_top_Addr_ctrl_0_0/design_top_Addr_ctrl_0_0.xci">
-          <Proxy FileSetName="design_top_Addr_ctrl_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_top.bd" FileRelPathName="ip/design_top_tx_mod_0_0/design_top_tx_mod_0_0.xci">
-          <Proxy FileSetName="design_top_tx_mod_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_top.bd" FileRelPathName="ip/design_top_clk_divider_UART_0_0/design_top_clk_divider_UART_0_0.xci">
-          <Proxy FileSetName="design_top_clk_divider_UART_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_top.bd" FileRelPathName="ip/design_top_clk_divider_0_0/design_top_clk_divider_0_0.xci">
-          <Proxy FileSetName="design_top_clk_divider_0_0"/>
-        </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/design_top/hdl/design_top_wrapper.vhd">
         <FileInfo>
+          <Attr Name="UserDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/hdl/design_top_wrapper.vhd">
+        <FileInfo>
+          <Attr Name="UserDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PGENDIR/sources_1/bd/design_top/hdl/design_top_wrapper.vhd"/>
+          <Attr Name="ImportTime" Val="1640874002"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/AND_GATE.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../UART_Gripper/UART_Gripper.srcs/sources_1/new/AND_GATE.vhd"/>
+          <Attr Name="ImportTime" Val="1639476333"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/imports/Downloads/rx_mod_rtl.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../UART_Gripper/UART_Gripper.srcs/sources_1/imports/Downloads/rx_mod_rtl.vhd"/>
+          <Attr Name="ImportTime" Val="1639476333"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="design_top_wrapper"/>
+        <Option Name="TopModule" Val="design_2_wrapper"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
@@ -214,10 +294,19 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sim_1/bd/design_1/design_1.bd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="design_top_wrapper"/>
+        <Option Name="TopModule" Val="design_2_wrapper"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SelectedSimModel" Val="rtl"/>
@@ -235,45 +324,9 @@
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_top_tx_mod_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_top_tx_mod_0_0" RelGenDir="$PGENDIR/design_top_tx_mod_0_0">
+    <FileSet Name="design_2_Addr_ctrl_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_2_Addr_ctrl_0_0" RelGenDir="$PGENDIR/design_2_Addr_ctrl_0_0">
       <Config>
-        <Option Name="TopModule" Val="design_top_tx_mod_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="design_top_Addr_Counter_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_top_Addr_Counter_0_0" RelGenDir="$PGENDIR/design_top_Addr_Counter_0_0">
-      <Config>
-        <Option Name="TopModule" Val="design_top_Addr_Counter_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="design_top_fsm_intr_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_top_fsm_intr_0_0" RelGenDir="$PGENDIR/design_top_fsm_intr_0_0">
-      <Config>
-        <Option Name="TopModule" Val="design_top_fsm_intr_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="design_top_CTRL_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_top_CTRL_0_0" RelGenDir="$PGENDIR/design_top_CTRL_0_0">
-      <Config>
-        <Option Name="TopModule" Val="design_top_CTRL_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="design_top_Addr_ctrl_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_top_Addr_ctrl_0_0" RelGenDir="$PGENDIR/design_top_Addr_ctrl_0_0">
-      <Config>
-        <Option Name="TopModule" Val="design_top_Addr_ctrl_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="design_top_clk_divider_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_top_clk_divider_0_0" RelGenDir="$PGENDIR/design_top_clk_divider_0_0">
-      <Config>
-        <Option Name="TopModule" Val="design_top_clk_divider_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="design_top_clk_divider_UART_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_top_clk_divider_UART_0_0" RelGenDir="$PGENDIR/design_top_clk_divider_UART_0_0">
-      <Config>
-        <Option Name="TopModule" Val="design_top_clk_divider_UART_0_0"/>
+        <Option Name="TopModule" Val="design_2_Addr_ctrl_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -313,73 +366,15 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_top_tx_mod_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_top_tx_mod_0_0" Part="xc7z020clg400-1" ConstrsSet="design_top_tx_mod_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_top_tx_mod_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../../../../../../esme/C:/Avnet/MYSPI/MYSPI.srcs/utils_1/imports/design_top_tx_mod_0_0_synth_1">
+    <Run Id="design_2_Addr_ctrl_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_2_Addr_ctrl_0_0" Part="xc7z020clg400-1" ConstrsSet="design_2_Addr_ctrl_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_2_Addr_ctrl_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_2_Addr_ctrl_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_top_Addr_Counter_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_top_Addr_Counter_0_0" Part="xc7z020clg400-1" ConstrsSet="design_top_Addr_Counter_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_top_Addr_Counter_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../../../../../../esme/C:/Avnet/MYSPI/MYSPI.srcs/utils_1/imports/design_top_Addr_Counter_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_top_fsm_intr_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_top_fsm_intr_0_0" Part="xc7z020clg400-1" ConstrsSet="design_top_fsm_intr_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_top_fsm_intr_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../../../../../../esme/C:/Avnet/MYSPI/MYSPI.srcs/utils_1/imports/design_top_fsm_intr_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_top_CTRL_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_top_CTRL_0_0" Part="xc7z020clg400-1" ConstrsSet="design_top_CTRL_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_top_CTRL_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../../../../../../esme/C:/Avnet/MYSPI/MYSPI.srcs/utils_1/imports/design_top_CTRL_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_top_Addr_ctrl_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_top_Addr_ctrl_0_0" Part="xc7z020clg400-1" ConstrsSet="design_top_Addr_ctrl_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_top_Addr_ctrl_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../../../../../../esme/C:/Avnet/MYSPI/MYSPI.srcs/utils_1/imports/design_top_Addr_ctrl_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_top_clk_divider_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_top_clk_divider_0_0" Part="xc7z020clg400-1" ConstrsSet="design_top_clk_divider_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_top_clk_divider_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../../../../../../esme/C:/Avnet/MYSPI/MYSPI.srcs/utils_1/imports/design_top_clk_divider_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_top_clk_divider_UART_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_top_clk_divider_UART_0_0" Part="xc7z020clg400-1" ConstrsSet="design_top_clk_divider_UART_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_top_clk_divider_UART_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../../../../../../esme/C:/Avnet/MYSPI/MYSPI.srcs/utils_1/imports/design_top_clk_divider_UART_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
@@ -401,9 +396,11 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_top_tx_mod_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_top_tx_mod_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_top_tx_mod_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../../../esme/C:/Avnet/MYSPI/MYSPI.srcs/utils_1/imports/design_top_tx_mod_0_0_impl_1">
+    <Run Id="design_2_Addr_ctrl_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_2_Addr_ctrl_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_2_Addr_ctrl_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_2_Addr_ctrl_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -414,109 +411,7 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_top_Addr_Counter_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_top_Addr_Counter_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_top_Addr_Counter_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../../../esme/C:/Avnet/MYSPI/MYSPI.srcs/utils_1/imports/design_top_Addr_Counter_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_top_fsm_intr_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_top_fsm_intr_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_top_fsm_intr_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../../../esme/C:/Avnet/MYSPI/MYSPI.srcs/utils_1/imports/design_top_fsm_intr_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_top_CTRL_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_top_CTRL_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_top_CTRL_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../../../esme/C:/Avnet/MYSPI/MYSPI.srcs/utils_1/imports/design_top_CTRL_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_top_Addr_ctrl_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_top_Addr_ctrl_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_top_Addr_ctrl_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../../../esme/C:/Avnet/MYSPI/MYSPI.srcs/utils_1/imports/design_top_Addr_ctrl_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_top_clk_divider_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_top_clk_divider_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_top_clk_divider_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../../../esme/C:/Avnet/MYSPI/MYSPI.srcs/utils_1/imports/design_top_clk_divider_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_top_clk_divider_UART_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_top_clk_divider_UART_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_top_clk_divider_UART_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../../../../esme/C:/Avnet/MYSPI/MYSPI.srcs/utils_1/imports/design_top_clk_divider_UART_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>

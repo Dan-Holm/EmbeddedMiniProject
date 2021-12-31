@@ -1,0 +1,125 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+| Date         : Fri Dec 31 02:01:04 2021
+| Host         : Daniel-laptop running 64-bit Ubuntu 20.04.3 LTS
+| Command      : report_control_sets -verbose -file design_2_wrapper_control_sets_placed.rpt
+| Design       : design_2_wrapper
+| Device       : xc7z020
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    47 |
+|    Minimum number of control sets                        |    47 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   176 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    47 |
+| >= 0 to < 4        |     6 |
+| >= 4 to < 6        |     7 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |     5 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |    18 |
+| >= 14 to < 16      |     2 |
+| >= 16              |     5 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              36 |           16 |
+| No           | No                    | Yes                    |              50 |           13 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |             321 |           88 |
+| Yes          | No                    | Yes                    |              64 |           19 |
+| Yes          | Yes                   | No                     |              57 |           17 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------------+-----------------------------------------------------+------------------------------------------------+------------------+----------------+--------------+
+|                Clock Signal                |                    Enable Signal                    |                Set/Reset Signal                | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------------------------+-----------------------------------------------------+------------------------------------------------+------------------+----------------+--------------+
+|  design_2_i/CTRL_0/U0/cs_reg_i_1_n_0       |                                                     |                                                |                1 |              1 |         1.00 |
+|  design_2_i/CTRL_0/U0/SCLK_reg_i_2_n_0     |                                                     |                                                |                1 |              1 |         1.00 |
+|  design_2_i/CTRL_0/U0/conf_flag__0         |                                                     |                                                |                1 |              1 |         1.00 |
+|  design_2_i/CTRL_0/U0/MOSI_reg_i_2_n_0     |                                                     |                                                |                1 |              1 |         1.00 |
+|  design_2_i/clk_divider_UART_0/U0/clk_div  |                                                     | rst_IBUF                                       |                1 |              3 |         3.00 |
+|  design_2_i/clk_divider_0/U0/clk_div_BUFG  | design_2_i/print_reg_0/U0/print_0                   | design_2_i/print_reg_0/U0/print[23]_i_1_n_0    |                1 |              3 |         3.00 |
+|  design_2_i/clk_divider_UART_0/U0/clk_div  | design_2_i/tx_mod_0/U0/count                        | rst_IBUF                                       |                1 |              4 |         4.00 |
+|  design_2_i/clk_divider_UART_0/U0/clk_div  | design_2_i/tx_mod_0/U0/cnt_bit[3]_i_1_n_0           | rst_IBUF                                       |                1 |              4 |         4.00 |
+|  design_2_i/clk_divider_0/U0/clk_div_BUFG  | design_2_i/fsm_intr_0/U0/intr                       | rst_IBUF                                       |                1 |              4 |         4.00 |
+|  design_2_i/clk_divider_0/U0/clk_div_BUFG  | design_2_i/CTRL_0/U0/count_conf                     | rst_IBUF                                       |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG                             | design_2_i/Gripper_ctrl_0/U0/count[3]_i_2_n_0       | design_2_i/Gripper_ctrl_0/U0/count0            |                1 |              4 |         4.00 |
+|  design_2_i/clk_divider_0/U0/clk_div_BUFG  | design_2_i/print_reg_0/U0/request[5]_i_1_n_0        | design_2_i/print_reg_0/U0/curr[3]_i_1_n_0      |                1 |              4 |         4.00 |
+|  design_2_i/clk_divider_0/U0/clk_div_BUFG  | design_2_i/print_reg_0/U0/request[5]_i_1_n_0        |                                                |                1 |              5 |         5.00 |
+|  design_2_i/clk_divider_0/U0/clk_div_BUFG  | design_2_i/CTRL_0/U0/addr_reg_conf0                 | design_2_i/CTRL_0/U0/addr_reg_conf[15]_i_1_n_0 |                1 |              6 |         6.00 |
+|  design_2_i/clk_divider_0/U0/clk_div_BUFG  | design_2_i/print_reg_0/U0/print_0                   | design_2_i/print_reg_0/U0/print[55]_i_1_n_0    |                4 |              7 |         1.75 |
+|  design_2_i/clk_divider_0/U0/clk_div_BUFG  | design_2_i/print_reg_0/U0/ascii[7]_i_1_n_0          |                                                |                3 |              7 |         2.33 |
+|  design_2_i/clk_divider_0/U0/clk_div_BUFG  | design_2_i/CTRL_0/U0/data_reg                       | rst_IBUF                                       |                2 |              8 |         4.00 |
+|  design_2_i/clk_divider_0/U0/clk_div_BUFG  | design_2_i/CTRL_0/U0/addr_reg                       | rst_IBUF                                       |                2 |              8 |         4.00 |
+|  design_2_i/CTRL_0/U0/data_ready_BUFG      | design_2_i/Gripper_ctrl_0/U0/local_data_0           |                                                |                2 |              8 |         4.00 |
+|  design_2_i/CTRL_0/U0/data1_reg[7]_i_2_n_0 |                                                     |                                                |                3 |              9 |         3.00 |
+|  clk_IBUF_BUFG                             |                                                     |                                                |                4 |              9 |         2.25 |
+|  design_2_i/clk_divider_UART_0/U0/clk_div  | design_2_i/tx_mod_0/U0/reg_data                     | rst_IBUF                                       |                2 |             10 |         5.00 |
+|  design_2_i/CTRL_0/U0/data_ready_BUFG      | design_2_i/print_data_reg_0/U0/hex_magx[30]_i_1_n_0 |                                                |                3 |             12 |         4.00 |
+|  design_2_i/CTRL_0/U0/data_ready_BUFG      | design_2_i/print_data_reg_0/U0/hex_magy[14]_i_1_n_0 |                                                |                2 |             12 |         6.00 |
+|  design_2_i/CTRL_0/U0/data_ready_BUFG      | design_2_i/print_data_reg_0/U0/hex_magy[30]_i_1_n_0 |                                                |                2 |             12 |         6.00 |
+|  design_2_i/CTRL_0/U0/data_ready_BUFG      | design_2_i/print_data_reg_0/U0/hex_magz[30]_i_1_n_0 |                                                |                4 |             12 |         3.00 |
+|  design_2_i/CTRL_0/U0/data_ready_BUFG      | design_2_i/print_data_reg_0/U0/hex_gyrx[30]_i_1_n_0 |                                                |                3 |             12 |         4.00 |
+|  design_2_i/CTRL_0/U0/data_ready_BUFG      | design_2_i/print_data_reg_0/U0/hex_gyrz[30]_i_1_n_0 |                                                |                2 |             12 |         6.00 |
+|  design_2_i/CTRL_0/U0/data_ready_BUFG      | design_2_i/print_data_reg_0/U0/hex_accy[14]_i_1_n_0 |                                                |                2 |             12 |         6.00 |
+|  design_2_i/CTRL_0/U0/data_ready_BUFG      | design_2_i/print_data_reg_0/U0/hex_gyry[14]_i_1_n_0 |                                                |                4 |             12 |         3.00 |
+|  design_2_i/CTRL_0/U0/data_ready_BUFG      | design_2_i/print_data_reg_0/U0/hex_gyrz[14]_i_1_n_0 |                                                |                3 |             12 |         4.00 |
+|  design_2_i/CTRL_0/U0/data_ready_BUFG      | design_2_i/print_data_reg_0/U0/hex_magz[14]_i_1_n_0 |                                                |                3 |             12 |         4.00 |
+|  design_2_i/CTRL_0/U0/data_ready_BUFG      | design_2_i/print_data_reg_0/U0/hex_accx[30]_i_1_n_0 |                                                |                3 |             12 |         4.00 |
+|  design_2_i/CTRL_0/U0/data_ready_BUFG      | design_2_i/print_data_reg_0/U0/hex_accx[14]_i_1_n_0 |                                                |                2 |             12 |         6.00 |
+|  design_2_i/CTRL_0/U0/data_ready_BUFG      | design_2_i/print_data_reg_0/U0/hex_accy[30]_i_1_n_0 |                                                |                2 |             12 |         6.00 |
+|  design_2_i/CTRL_0/U0/data_ready_BUFG      | design_2_i/print_data_reg_0/U0/hex_accz[30]_i_1_n_0 |                                                |                2 |             12 |         6.00 |
+|  design_2_i/CTRL_0/U0/data_ready_BUFG      | design_2_i/print_data_reg_0/U0/hex_accz[14]_i_1_n_0 |                                                |                4 |             12 |         3.00 |
+|  design_2_i/CTRL_0/U0/data_ready_BUFG      | design_2_i/print_data_reg_0/U0/hex_gyrx[14]_i_1_n_0 |                                                |                4 |             12 |         3.00 |
+|  design_2_i/CTRL_0/U0/data_ready_BUFG      | design_2_i/print_data_reg_0/U0/hex_gyry[30]_i_1_n_0 |                                                |                2 |             12 |         6.00 |
+|  design_2_i/CTRL_0/U0/data_ready_BUFG      | design_2_i/print_data_reg_0/U0/hex_magx[14]_i_1_n_0 |                                                |                3 |             12 |         4.00 |
+|  design_2_i/clk_divider_0/U0/clk_div_BUFG  |                                                     |                                                |                5 |             14 |         2.80 |
+|  design_2_i/clk_divider_0/U0/clk_div_BUFG  |                                                     | rst_IBUF                                       |                4 |             15 |         3.75 |
+|  clk_IBUF_BUFG                             | design_2_i/Counter_27_0/U0/p_0_in                   | rst_IBUF                                       |                8 |             22 |         2.75 |
+|  design_2_i/clk_divider_0/U0/clk_div_BUFG  | design_2_i/print_data_reg_0/U0/response[30]_i_3_n_0 |                                                |               16 |             31 |         1.94 |
+|  clk_IBUF_BUFG                             |                                                     | rst_IBUF                                       |                8 |             32 |         4.00 |
+|  design_2_i/clk_divider_0/U0/clk_div_BUFG  | design_2_i/print_reg_0/U0/count[0]_i_2_n_0          | design_2_i/print_reg_0/U0/count[0]_i_1_n_0     |                9 |             33 |         3.67 |
+|  design_2_i/clk_divider_0/U0/clk_div_BUFG  | design_2_i/print_reg_0/U0/print_0                   |                                                |               16 |             54 |         3.38 |
++--------------------------------------------+-----------------------------------------------------+------------------------------------------------+------------------+----------------+--------------+
+
+

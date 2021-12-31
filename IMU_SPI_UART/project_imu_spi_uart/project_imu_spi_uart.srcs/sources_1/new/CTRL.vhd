@@ -122,7 +122,7 @@ begin
             count <= count +1;             
             
           WHEN s_conf_1 =>
-            addr_reg_conf <= x"06"&"00000000";
+            addr_reg_conf <= x"09"&"00000000";
          WHEN s_conf_2 =>
             addr_reg_conf <= addr_reg_conf(14 downto 0) & '0';
             count_conf <= count_conf +1;        

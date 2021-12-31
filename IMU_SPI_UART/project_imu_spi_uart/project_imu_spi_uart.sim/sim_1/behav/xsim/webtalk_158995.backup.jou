@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Dec 30 15:33:08 2021
+# Process ID: 158995
+# Current directory: /home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.sim/sim_1/behav/xsim/xsim.dir/Addr_Counter_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/daniel/Documents/SDU/1.Semester_msc/Embedded/miniProject/EmbeddedSystems/IMU_SPI_UART/project_imu_spi_uart/project_imu_spi_uart.sim/sim_1/behav/xsim/xsim.dir/Addr_Counter_behav/webtalk/xsim_webtalk.tcl -notrace

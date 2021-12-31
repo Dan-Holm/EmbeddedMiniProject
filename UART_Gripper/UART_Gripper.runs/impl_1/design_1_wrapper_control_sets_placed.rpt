@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
-| Date         : Tue Dec 14 16:15:27 2021
+| Date         : Wed Dec 15 13:30:21 2021
 | Host         : Daniel-laptop running 64-bit Ubuntu 20.04.3 LTS
 | Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
 | Design       : design_1_wrapper
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               5 |            3 |
-| No           | No                    | Yes                    |               8 |            3 |
+| No           | No                    | No                     |               5 |            4 |
+| No           | No                    | Yes                    |               8 |            2 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              22 |            7 |
-| Yes          | Yes                   | No                     |               4 |            2 |
+| Yes          | No                    | Yes                    |              22 |            9 |
+| Yes          | Yes                   | No                     |               4 |            1 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -74,10 +74,10 @@ Table of Contents
 |             Clock Signal             |            Enable Signal           |           Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
 +--------------------------------------+------------------------------------+-------------------------------------+------------------+----------------+--------------+
 |  clk_IBUF_BUFG                       |                                    |                                     |                1 |              1 |         1.00 |
-|  design_1_i/clk_divider_0/U0/clk_div |                                    |                                     |                2 |              4 |         2.00 |
-|  design_1_i/clk_divider_0/U0/clk_div | design_1_i/Gripper_ctrl_0/U0/count | design_1_i/Gripper_ctrl_0/U0/count0 |                2 |              4 |         2.00 |
-|  clk_IBUF_BUFG                       |                                    | rst_IBUF                            |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG                       | en_IBUF                            | rst_IBUF                            |                7 |             22 |         3.14 |
+|  design_1_i/clk_divider_0/U0/clk_div |                                    |                                     |                3 |              4 |         1.33 |
+|  design_1_i/clk_divider_0/U0/clk_div | design_1_i/Gripper_ctrl_0/U0/count | design_1_i/Gripper_ctrl_0/U0/count0 |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                       |                                    | rst_IBUF                            |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                       | en_IBUF                            | rst_IBUF                            |                9 |             22 |         2.44 |
 +--------------------------------------+------------------------------------+-------------------------------------+------------------+----------------+--------------+
 
 

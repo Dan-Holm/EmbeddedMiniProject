@@ -1,6 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../MYSPI.srcs/sources_1/new/CTRL.vhd" \
-
-# Do not sort compile order
-nosort
